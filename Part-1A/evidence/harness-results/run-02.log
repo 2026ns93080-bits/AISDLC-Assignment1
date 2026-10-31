@@ -1,0 +1,404 @@
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m ruff check --config .harness/ruff.toml --no-cache --output-format json src
+--- exit code: 1
+--- stdout ---
+[
+  {
+    "cell": null,
+    "code": "UP042",
+    "end_location": {
+      "column": 16,
+      "row": 15
+    },
+    "filename": "D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\src\\parking_fee\\parsing.py",
+    "fix": {
+      "applicability": "unsafe",
+      "edits": [
+        {
+          "content": "from enum import Enum, StrEnum",
+          "end_location": {
+            "column": 22,
+            "row": 6
+          },
+          "location": {
+            "column": 1,
+            "row": 6
+          }
+        },
+        {
+          "content": "(StrEnum)",
+          "end_location": {
+            "column": 27,
+            "row": 15
+          },
+          "location": {
+            "column": 16,
+            "row": 15
+          }
+        }
+      ],
+      "message": "Inherit from `enum.StrEnum`"
+    },
+    "location": {
+      "column": 7,
+      "row": 15
+    },
+    "message": "Class ErrorCode inherits from both `str` and `enum.Enum`",
+    "name": "replace-str-enum",
+    "noqa_row": 15,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/replace-str-enum"
+  },
+  {
+    "cell": null,
+    "code": "UP035",
+    "end_location": {
+      "column": 43,
+      "row": 3
+    },
+    "filename": "D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\src\\parking_fee\\tariff.py",
+    "fix": {
+      "applicability": "safe",
+      "edits": [
+        {
+          "content": "from typing import Final, Literal\r\nfrom collections.abc import Mapping",
+          "end_location": {
+            "column": 43,
+            "row": 3
+          },
+          "location": {
+            "column": 1,
+            "row": 3
+          }
+        }
+      ],
+      "message": "Import from `collections.abc`"
+    },
+    "location": {
+      "column": 1,
+      "row": 3
+    },
+    "message": "Import from `collections.abc` instead: `Mapping`",
+    "name": "deprecated-import",
+    "noqa_row": 3,
+    "severity": "error",
+    "url": "https://docs.astral.sh/ruff/rules/deprecated-import"
+  }
+]
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m bandit -r src -f json -q
+--- exit code: 0
+--- stdout ---
+{
+  "errors": [],
+  "generated_at": "2026-10-31T16:11:37Z",
+  "metrics": {
+    "_totals": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 209,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\parking_fee\\__init__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 0,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\parking_fee\\__main__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 3,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\parking_fee\\calculator.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 34,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\parking_fee\\cli.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 33,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\parking_fee\\parsing.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 113,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\parking_fee\\tariff.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 26,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": []
+}
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m pytest tests -c .harness/pytest.ini --rootdir . -p no:cacheprovider -q --tb=short --junitxml=C:\Users\abhin\AppData\Local\Temp\tmpryzodq5c\junit.xml --cov=src/parking_fee --cov-config=.harness/coveragerc --cov-report=json:C:\Users\abhin\AppData\Local\Temp\tmpryzodq5c\coverage.json --cov-report=term-missing
+--- exit code: 0
+--- stdout ---
+........................................................................ [ 49%]
+........................................................................ [ 99%]
+.                                                                        [100%]
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.4-final-0 _______________
+
+Name                            Stmts   Miss  Cover   Missing
+-------------------------------------------------------------
+src\parking_fee\__init__.py         0      0   100%
+src\parking_fee\__main__.py         3      3     0%   1-6
+src\parking_fee\calculator.py      14      0   100%
+src\parking_fee\cli.py             23      0   100%
+src\parking_fee\parsing.py         95      3    97%   54, 96-97
+src\parking_fee\tariff.py           7      0   100%
+-------------------------------------------------------------
+TOTAL                             142      6    96%
+Coverage JSON written to file C:\Users\abhin\AppData\Local\Temp\tmpryzodq5c\coverage.json
+145 passed in 1.28s
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m pytest tests -c .harness/pytest.ini --rootdir . -p no:cacheprovider --collect-only -q
+--- exit code: 0
+--- stdout ---
+tests/test_acceptance.py::test_valid_ticket[AC-001]
+tests/test_acceptance.py::test_valid_ticket[AC-002]
+tests/test_acceptance.py::test_valid_ticket[AC-003]
+tests/test_acceptance.py::test_valid_ticket[AC-004]
+tests/test_acceptance.py::test_valid_ticket[AC-005]
+tests/test_acceptance.py::test_valid_ticket[AC-006]
+tests/test_acceptance.py::test_valid_ticket[AC-007]
+tests/test_acceptance.py::test_valid_ticket[AC-008]
+tests/test_acceptance.py::test_valid_ticket[AC-009]
+tests/test_acceptance.py::test_valid_ticket[AC-010]
+tests/test_acceptance.py::test_valid_ticket[AC-011]
+tests/test_acceptance.py::test_valid_ticket[AC-012]
+tests/test_acceptance.py::test_valid_ticket[AC-013]
+tests/test_acceptance.py::test_valid_ticket[AC-014]
+tests/test_acceptance.py::test_valid_ticket[AC-015]
+tests/test_acceptance.py::test_valid_ticket[AC-016]
+tests/test_acceptance.py::test_valid_ticket[AC-017]
+tests/test_acceptance.py::test_valid_ticket[AC-018]
+tests/test_acceptance.py::test_valid_ticket[AC-019]
+tests/test_acceptance.py::test_valid_ticket[AC-020]
+tests/test_acceptance.py::test_valid_ticket[AC-021]
+tests/test_acceptance.py::test_valid_ticket[AC-022]
+tests/test_acceptance.py::test_valid_ticket[AC-023]
+tests/test_acceptance.py::test_valid_ticket[AC-034]
+tests/test_acceptance.py::test_valid_ticket[AC-035]
+tests/test_acceptance.py::test_valid_ticket[AC-036]
+tests/test_acceptance.py::test_valid_ticket[AC-037]
+tests/test_acceptance.py::test_valid_ticket[AC-038]
+tests/test_acceptance.py::test_valid_ticket[AC-039]
+tests/test_acceptance.py::test_invalid_input[AC-024a]
+tests/test_acceptance.py::test_invalid_input[AC-024b]
+tests/test_acceptance.py::test_invalid_input[AC-025a]
+tests/test_acceptance.py::test_invalid_input[AC-025b]
+tests/test_acceptance.py::test_invalid_input[AC-026a]
+tests/test_acceptance.py::test_invalid_input[AC-026b]
+tests/test_acceptance.py::test_invalid_input[AC-026c]
+tests/test_acceptance.py::test_invalid_input[AC-026d]
+tests/test_acceptance.py::test_invalid_input[AC-027a]
+tests/test_acceptance.py::test_invalid_input[AC-027b]
+tests/test_acceptance.py::test_invalid_input[AC-027c]
+tests/test_acceptance.py::test_invalid_input[AC-028a]
+tests/test_acceptance.py::test_invalid_input[AC-028b]
+tests/test_acceptance.py::test_invalid_input[AC-028c]
+tests/test_acceptance.py::test_invalid_input[AC-028d]
+tests/test_acceptance.py::test_invalid_input[AC-028e]
+tests/test_acceptance.py::test_invalid_input[AC-029a]
+tests/test_acceptance.py::test_invalid_input[AC-029b]
+tests/test_acceptance.py::test_invalid_input[AC-029c]
+tests/test_acceptance.py::test_invalid_input[AC-029d]
+tests/test_acceptance.py::test_invalid_input[AC-030a]
+tests/test_acceptance.py::test_invalid_input[AC-030b]
+tests/test_acceptance.py::test_invalid_input[AC-030c]
+tests/test_acceptance.py::test_invalid_input[AC-031a]
+tests/test_acceptance.py::test_invalid_input[AC-031b]
+tests/test_acceptance.py::test_invalid_input[AC-032]
+tests/test_acceptance.py::test_invalid_input[AC-033a]
+tests/test_acceptance.py::test_invalid_input[AC-033b]
+tests/test_acceptance.py::test_invalid_input[AC-033c]
+tests/test_acceptance.py::test_invalid_input[AC-033d]
+tests/test_acceptance.py::test_invalid_input[AC-033e]
+tests/test_acceptance.py::test_invalid_input[AC-033f]
+tests/test_acceptance.py::test_invalid_input[AC-033g]
+tests/test_acceptance.py::test_invalid_input[AC-033h]
+tests/test_acceptance.py::test_invalid_input[AC-033i]
+tests/test_acceptance.py::test_invalid_input[AC-040]
+tests/test_acceptance.py::test_invalid_input[AC-041]
+tests/test_acceptance.py::test_invalid_input[AC-042]
+tests/test_acceptance.py::test_invalid_input[AC-043]
+tests/test_acceptance.py::test_valid_ticket_end_to_end[AC-015]
+tests/test_acceptance.py::test_valid_ticket_end_to_end[AC-021]
+tests/test_acceptance.py::test_valid_ticket_end_to_end[AC-039]
+tests/test_acceptance.py::test_invalid_input_end_to_end[AC-024a]
+tests/test_acceptance.py::test_invalid_input_end_to_end[AC-025a]
+tests/test_acceptance.py::test_invalid_input_end_to_end[AC-040]
+tests/test_acceptance.py::test_invalid_input_end_to_end[AC-042]
+tests/test_acceptance.py::test_invalid_input_end_to_end[AC-043]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-001]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-002]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-003]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-004]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-005]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-006]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-007]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-008]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-009]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-010]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-011]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-012]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-013]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-014]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-015]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-016]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-017]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-018]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-019]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-020]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-021]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-022]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-023]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-034]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-035]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-036]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-037]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-038]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-039]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-024a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-024b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-025a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-025b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026d]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-027a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-027b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-027c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028d]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028e]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029d]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-030a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-030b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-030c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-031a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-031b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-032]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033d]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033e]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033f]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033g]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033h]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033i]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-040]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-041]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-042]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-043]
+tests/test_acceptance.py::test_sc003_repeat_end_to_end
+
+145 tests collected in 0.01s
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m ruff --version
+--- exit code: 0
+--- stdout ---
+ruff 0.17.3
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m bandit --version
+--- exit code: 0
+--- stdout ---
+python.exe -m bandit 1.9.4
+  python version = 3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m pytest --version
+--- exit code: 0
+--- stdout ---
+pytest 9.2.0
+
+--- stderr ---
+
+
+$ git rev-parse HEAD
+--- exit code: 0
+--- stdout ---
+b913834033423d5ef5cb4d1f43e7b2d668b18cc2
+
+--- stderr ---
+

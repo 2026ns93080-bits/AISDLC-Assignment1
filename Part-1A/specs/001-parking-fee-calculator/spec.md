@@ -4,7 +4,7 @@
 
 **Created**: 2026-10-31
 
-**Status**: Draft
+**Status**: Approved
 
 **Input**: User description: "Build a Parking Fee Calculator that reads one parking ticket from a JSON file and prints the fee."
 
@@ -34,8 +34,6 @@ A parking attendant supplies one ticket file and receives the duration, parking 
 2. **Given** a valid two-wheeler ticket, **When** its file path is supplied, **Then** the fee uses the two-wheeler tariff, as verified by AC-016.
 
 ### User Story 2 - Apply grace, tariff, caps, and penalties (Priority: P1)
-
-**Status**: Ready for Planning
 
 A parking attendant receives a bill that accounts for the grace period, hourly rounding, full 24-hour blocks, daily caps, and a lost ticket.
 
@@ -93,7 +91,7 @@ A user receives one stable, actionable error message when the argument, file, or
 - **FR-009**: For a duration longer than 15 minutes, the full stay duration MUST be billed; the grace period MUST NOT be deducted. Each started hour MUST be charged at the vehicle's hourly rate.
 - **FR-010**: For a duration `D` greater than 15 minutes, the parking fee MUST equal `(D // 1440) * cap + min(cap, ceil((D % 1440) / 60) * rate)`. Each complete 1440-minute block receives one cap, and the remaining minutes are billed in started hours up to one cap.
 - **FR-011**: The total fee MUST equal the parking fee plus the lost-ticket penalty.
-- **FR-012**: On success, the command MUST exit with status 0 and write exactly one line to standard output: a compact JSON object followed by one newline. Its keys MUST appear in alphabetical order and its values MUST be `duration_minutes`, `lost_ticket_penalty`, `parking_fee`, `total_fee`, and `vehicle_type`. The object MUST contain no spaces. Standard error MUST be empty.
+- **FR-012**: On success, the command MUST exit with status 0 and write exactly one line to standard output: a compact JSON object followed by one newline. The object MUST contain exactly five keys, duration_minutes, lost_ticket_penalty, parking_fee, total_fee and vehicle_type, in that alphabetical order, with no spaces and no other keys. duration_minutes, lost_ticket_penalty, parking_fee and total_fee MUST be JSON integers written without a decimal point or exponent; vehicle_type MUST be a JSON string. Standard error MUST be empty.
 - **FR-013**: On failure, the command MUST exit with status 2, write nothing to standard output, and write exactly one line to standard error: the applicable message below followed by one newline. The first failing check MUST win, in this order:
   1. Argument count — `error: expected exactly one input file path`
   2. File missing or unreadable — `error: cannot read input file`

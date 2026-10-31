@@ -1,0 +1,1500 @@
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m pytest tests -c .harness/pytest.ini --rootdir . -p no:cacheprovider -q --tb=short --junitxml=C:\Users\abhin\AppData\Local\Temp\tmpidullm_z\junit.xml --cov=src/parking_fee --cov-config=.harness/coveragerc --cov-report=json:C:\Users\abhin\AppData\Local\Temp\tmpidullm_z\coverage.json --cov-report=term-missing
+--- exit code: 1
+--- stdout ---
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 49%]
+FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF [ 99%]
+F
+WARNING: Failed to generate report: No data to report.
+
+                                                                         [100%]
+================================== FAILURES ===================================
+__________________________ test_valid_ticket[AC-001] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-002] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-003] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-004] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-005] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-006] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-007] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-008] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-009] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-010] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-011] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-012] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-013] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-014] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-015] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-016] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-017] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-018] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-019] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-020] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-021] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-022] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-023] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-034] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-035] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-036] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-037] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-038] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+__________________________ test_valid_ticket[AC-039] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:175: in test_valid_ticket
+    observed = run_in_process([str(path)], capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-024a] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-024b] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-025a] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-025b] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-026a] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-026b] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-026c] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-026d] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-027a] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-027b] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-027c] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-028a] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-028b] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-028c] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-028d] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-028e] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-029a] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-029b] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-029c] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-029d] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-030a] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-030b] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-030c] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-031a] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-031b] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-032] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-033a] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-033b] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-033c] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-033d] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-033e] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-033f] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-033g] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-033h] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-033i] _________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-040] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-041] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-042] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_________________________ test_invalid_input[AC-043] __________________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:409: in test_invalid_input
+    observed = run_in_process(argv, capsysbinary)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+____________________ test_valid_ticket_end_to_end[AC-015] _____________________
+tests\test_acceptance.py:427: in test_valid_ticket_end_to_end
+    check(ac + " (python -m parking_fee)", observed, 0, success_line(duration, penalty, fee, total, vehicle), b"")
+E   AssertionError: AC-015 (python -m parking_fee)
+E     exit status: expected 0, observed 1
+E     stdout: expected b'{"duration_minutes":190,"lost_ticket_penalty":0,"parking_fee":160,"total_fee":160,"vehicle_type":"car"}\n', observed b''
+E     stderr: expected b'', observed b'D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\.venv\\Scripts\\python.exe: No module named parking_fee\r\n'
+____________________ test_valid_ticket_end_to_end[AC-021] _____________________
+tests\test_acceptance.py:427: in test_valid_ticket_end_to_end
+    check(ac + " (python -m parking_fee)", observed, 0, success_line(duration, penalty, fee, total, vehicle), b"")
+E   AssertionError: AC-021 (python -m parking_fee)
+E     exit status: expected 0, observed 1
+E     stdout: expected b'{"duration_minutes":61,"lost_ticket_penalty":200,"parking_fee":40,"total_fee":240,"vehicle_type":"two_wheeler"}\n', observed b''
+E     stderr: expected b'', observed b'D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\.venv\\Scripts\\python.exe: No module named parking_fee\r\n'
+____________________ test_valid_ticket_end_to_end[AC-039] _____________________
+tests\test_acceptance.py:427: in test_valid_ticket_end_to_end
+    check(ac + " (python -m parking_fee)", observed, 0, success_line(duration, penalty, fee, total, vehicle), b"")
+E   AssertionError: AC-039 (python -m parking_fee)
+E     exit status: expected 0, observed 1
+E     stdout: expected b'{"duration_minutes":2880,"lost_ticket_penalty":0,"parking_fee":600,"total_fee":600,"vehicle_type":"car"}\n', observed b''
+E     stderr: expected b'', observed b'D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\.venv\\Scripts\\python.exe: No module named parking_fee\r\n'
+___________________ test_invalid_input_end_to_end[AC-024a] ____________________
+tests\test_acceptance.py:436: in test_invalid_input_end_to_end
+    check(vector[0] + " (python -m parking_fee)", observed, 2, b"", error_line(vector[3]))
+E   AssertionError: AC-024a (python -m parking_fee)
+E     exit status: expected 2, observed 1
+E     stderr: expected b'error: expected exactly one input file path\n', observed b'D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\.venv\\Scripts\\python.exe: No module named parking_fee\r\n'
+___________________ test_invalid_input_end_to_end[AC-025a] ____________________
+tests\test_acceptance.py:436: in test_invalid_input_end_to_end
+    check(vector[0] + " (python -m parking_fee)", observed, 2, b"", error_line(vector[3]))
+E   AssertionError: AC-025a (python -m parking_fee)
+E     exit status: expected 2, observed 1
+E     stderr: expected b'error: cannot read input file\n', observed b'D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\.venv\\Scripts\\python.exe: No module named parking_fee\r\n'
+____________________ test_invalid_input_end_to_end[AC-040] ____________________
+tests\test_acceptance.py:436: in test_invalid_input_end_to_end
+    check(vector[0] + " (python -m parking_fee)", observed, 2, b"", error_line(vector[3]))
+E   AssertionError: AC-040 (python -m parking_fee)
+E     exit status: expected 2, observed 1
+E     stderr: expected b'error: cannot read input file\n', observed b'D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\.venv\\Scripts\\python.exe: No module named parking_fee\r\n'
+____________________ test_invalid_input_end_to_end[AC-042] ____________________
+tests\test_acceptance.py:436: in test_invalid_input_end_to_end
+    check(vector[0] + " (python -m parking_fee)", observed, 2, b"", error_line(vector[3]))
+E   AssertionError: AC-042 (python -m parking_fee)
+E     exit status: expected 2, observed 1
+E     stderr: expected b'error: input must be valid JSON\n', observed b'D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\.venv\\Scripts\\python.exe: No module named parking_fee\r\n'
+____________________ test_invalid_input_end_to_end[AC-043] ____________________
+tests\test_acceptance.py:436: in test_invalid_input_end_to_end
+    check(vector[0] + " (python -m parking_fee)", observed, 2, b"", error_line(vector[3]))
+E   AssertionError: AC-043 (python -m parking_fee)
+E     exit status: expected 2, observed 1
+E     stderr: expected b'error: input must be valid JSON\n', observed b'D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\.venv\\Scripts\\python.exe: No module named parking_fee\r\n'
+_______________________ test_sc003_repeat_valid[AC-001] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-002] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-003] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-004] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-005] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-006] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-007] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-008] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-009] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-010] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-011] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-012] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-013] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-014] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-015] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-016] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-017] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-018] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-019] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-020] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-021] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-022] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-023] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-034] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-035] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-036] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-037] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-038] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_______________________ test_sc003_repeat_valid[AC-039] _______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:455: in test_sc003_repeat_valid
+    first = run_in_process([str(path)], capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-024a] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-024b] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-025a] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-025b] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-026a] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-026b] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-026c] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-026d] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-027a] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-027b] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-027c] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-028a] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-028b] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-028c] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-028d] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-028e] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-029a] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-029b] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-029c] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-029d] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-030a] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-030b] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-030c] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-031a] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-031b] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+______________________ test_sc003_repeat_invalid[AC-032] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-033a] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-033b] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-033c] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-033d] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-033e] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-033f] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-033g] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-033h] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+_____________________ test_sc003_repeat_invalid[AC-033i] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+______________________ test_sc003_repeat_invalid[AC-040] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+______________________ test_sc003_repeat_invalid[AC-041] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+______________________ test_sc003_repeat_invalid[AC-042] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+______________________ test_sc003_repeat_invalid[AC-043] ______________________
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:465: in test_sc003_repeat_invalid
+    first = run_in_process(argv, capsysbinary)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\tests\test_acceptance.py:69: in run_in_process
+    from parking_fee.cli import main  # imported lazily so tests are collectable before src exists
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   ModuleNotFoundError: No module named 'parking_fee'
+________________________ test_sc003_repeat_end_to_end _________________________
+tests\test_acceptance.py:477: in test_sc003_repeat_end_to_end
+    check("AC-015 SC-003 first run (python -m parking_fee)", first, 0, want, b"")
+E   AssertionError: AC-015 SC-003 first run (python -m parking_fee)
+E     exit status: expected 0, observed 1
+E     stdout: expected b'{"duration_minutes":190,"lost_ticket_penalty":0,"parking_fee":160,"total_fee":160,"vehicle_type":"car"}\n', observed b''
+E     stderr: expected b'', observed b'D:\\M.Tech\\Semesters\\Semester 1\\AssignmentWorkspace\\AISDLC\\Assignment-1-SDD-HE\\Part-1A\\.venv\\Scripts\\python.exe: No module named parking_fee\r\n'
+=========================== short test summary info ===========================
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-001] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-002] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-003] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-004] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-005] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-006] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-007] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-008] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-009] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-010] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-011] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-012] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-013] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-014] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-015] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-016] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-017] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-018] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-019] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-020] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-021] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-022] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-023] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-034] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-035] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-036] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-037] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-038] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_valid_ticket[AC-039] - ModuleNotFoundEr...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-024a] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-024b] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-025a] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-025b] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-026a] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-026b] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-026c] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-026d] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-027a] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-027b] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-027c] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-028a] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-028b] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-028c] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-028d] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-028e] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-029a] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-029b] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-029c] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-029d] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-030a] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-030b] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-030c] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-031a] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-031b] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-032] - ModuleNotFoundE...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-033a] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-033b] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-033c] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-033d] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-033e] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-033f] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-033g] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-033h] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-033i] - ModuleNotFound...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-040] - ModuleNotFoundE...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-041] - ModuleNotFoundE...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-042] - ModuleNotFoundE...
+FAILED tests/test_acceptance.py::test_invalid_input[AC-043] - ModuleNotFoundE...
+FAILED tests/test_acceptance.py::test_valid_ticket_end_to_end[AC-015] - Asser...
+FAILED tests/test_acceptance.py::test_valid_ticket_end_to_end[AC-021] - Asser...
+FAILED tests/test_acceptance.py::test_valid_ticket_end_to_end[AC-039] - Asser...
+FAILED tests/test_acceptance.py::test_invalid_input_end_to_end[AC-024a] - Ass...
+FAILED tests/test_acceptance.py::test_invalid_input_end_to_end[AC-025a] - Ass...
+FAILED tests/test_acceptance.py::test_invalid_input_end_to_end[AC-040] - Asse...
+FAILED tests/test_acceptance.py::test_invalid_input_end_to_end[AC-042] - Asse...
+FAILED tests/test_acceptance.py::test_invalid_input_end_to_end[AC-043] - Asse...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-001] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-002] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-003] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-004] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-005] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-006] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-007] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-008] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-009] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-010] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-011] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-012] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-013] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-014] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-015] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-016] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-017] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-018] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-019] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-020] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-021] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-022] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-023] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-034] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-035] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-036] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-037] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-038] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_valid[AC-039] - ModuleNotF...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-024a] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-024b] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-025a] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-025b] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026a] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026b] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026c] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026d] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-027a] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-027b] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-027c] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028a] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028b] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028c] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028d] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028e] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029a] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029b] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029c] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029d] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-030a] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-030b] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-030c] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-031a] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-031b] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-032] - ModuleNo...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033a] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033b] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033c] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033d] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033e] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033f] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033g] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033h] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033i] - ModuleN...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-040] - ModuleNo...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-041] - ModuleNo...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-042] - ModuleNo...
+FAILED tests/test_acceptance.py::test_sc003_repeat_invalid[AC-043] - ModuleNo...
+FAILED tests/test_acceptance.py::test_sc003_repeat_end_to_end - AssertionErro...
+145 failed in 1.81s
+
+--- stderr ---
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Lib\site-packages\coverage\inorout.py:558: CoverageWarning: Module src/parking_fee was never imported. (module-not-imported); see https://coverage.readthedocs.io/en/7.17.0/messages.html#warning-module-not-imported
+  self.warn(f"Module {pkg} was never imported.", slug="module-not-imported")
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Lib\site-packages\coverage\control.py:967: CoverageWarning: No data was collected. (no-data-collected); see https://coverage.readthedocs.io/en/7.17.0/messages.html#warning-no-data-collected
+  self._warn("No data was collected.", slug="no-data-collected")
+D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Lib\site-packages\pytest_cov\plugin.py:366: CovReportWarning: Failed to generate report: No data to report.
+
+  warnings.warn(CovReportWarning(message), stacklevel=1)
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m pytest tests -c .harness/pytest.ini --rootdir . -p no:cacheprovider --collect-only -q
+--- exit code: 0
+--- stdout ---
+tests/test_acceptance.py::test_valid_ticket[AC-001]
+tests/test_acceptance.py::test_valid_ticket[AC-002]
+tests/test_acceptance.py::test_valid_ticket[AC-003]
+tests/test_acceptance.py::test_valid_ticket[AC-004]
+tests/test_acceptance.py::test_valid_ticket[AC-005]
+tests/test_acceptance.py::test_valid_ticket[AC-006]
+tests/test_acceptance.py::test_valid_ticket[AC-007]
+tests/test_acceptance.py::test_valid_ticket[AC-008]
+tests/test_acceptance.py::test_valid_ticket[AC-009]
+tests/test_acceptance.py::test_valid_ticket[AC-010]
+tests/test_acceptance.py::test_valid_ticket[AC-011]
+tests/test_acceptance.py::test_valid_ticket[AC-012]
+tests/test_acceptance.py::test_valid_ticket[AC-013]
+tests/test_acceptance.py::test_valid_ticket[AC-014]
+tests/test_acceptance.py::test_valid_ticket[AC-015]
+tests/test_acceptance.py::test_valid_ticket[AC-016]
+tests/test_acceptance.py::test_valid_ticket[AC-017]
+tests/test_acceptance.py::test_valid_ticket[AC-018]
+tests/test_acceptance.py::test_valid_ticket[AC-019]
+tests/test_acceptance.py::test_valid_ticket[AC-020]
+tests/test_acceptance.py::test_valid_ticket[AC-021]
+tests/test_acceptance.py::test_valid_ticket[AC-022]
+tests/test_acceptance.py::test_valid_ticket[AC-023]
+tests/test_acceptance.py::test_valid_ticket[AC-034]
+tests/test_acceptance.py::test_valid_ticket[AC-035]
+tests/test_acceptance.py::test_valid_ticket[AC-036]
+tests/test_acceptance.py::test_valid_ticket[AC-037]
+tests/test_acceptance.py::test_valid_ticket[AC-038]
+tests/test_acceptance.py::test_valid_ticket[AC-039]
+tests/test_acceptance.py::test_invalid_input[AC-024a]
+tests/test_acceptance.py::test_invalid_input[AC-024b]
+tests/test_acceptance.py::test_invalid_input[AC-025a]
+tests/test_acceptance.py::test_invalid_input[AC-025b]
+tests/test_acceptance.py::test_invalid_input[AC-026a]
+tests/test_acceptance.py::test_invalid_input[AC-026b]
+tests/test_acceptance.py::test_invalid_input[AC-026c]
+tests/test_acceptance.py::test_invalid_input[AC-026d]
+tests/test_acceptance.py::test_invalid_input[AC-027a]
+tests/test_acceptance.py::test_invalid_input[AC-027b]
+tests/test_acceptance.py::test_invalid_input[AC-027c]
+tests/test_acceptance.py::test_invalid_input[AC-028a]
+tests/test_acceptance.py::test_invalid_input[AC-028b]
+tests/test_acceptance.py::test_invalid_input[AC-028c]
+tests/test_acceptance.py::test_invalid_input[AC-028d]
+tests/test_acceptance.py::test_invalid_input[AC-028e]
+tests/test_acceptance.py::test_invalid_input[AC-029a]
+tests/test_acceptance.py::test_invalid_input[AC-029b]
+tests/test_acceptance.py::test_invalid_input[AC-029c]
+tests/test_acceptance.py::test_invalid_input[AC-029d]
+tests/test_acceptance.py::test_invalid_input[AC-030a]
+tests/test_acceptance.py::test_invalid_input[AC-030b]
+tests/test_acceptance.py::test_invalid_input[AC-030c]
+tests/test_acceptance.py::test_invalid_input[AC-031a]
+tests/test_acceptance.py::test_invalid_input[AC-031b]
+tests/test_acceptance.py::test_invalid_input[AC-032]
+tests/test_acceptance.py::test_invalid_input[AC-033a]
+tests/test_acceptance.py::test_invalid_input[AC-033b]
+tests/test_acceptance.py::test_invalid_input[AC-033c]
+tests/test_acceptance.py::test_invalid_input[AC-033d]
+tests/test_acceptance.py::test_invalid_input[AC-033e]
+tests/test_acceptance.py::test_invalid_input[AC-033f]
+tests/test_acceptance.py::test_invalid_input[AC-033g]
+tests/test_acceptance.py::test_invalid_input[AC-033h]
+tests/test_acceptance.py::test_invalid_input[AC-033i]
+tests/test_acceptance.py::test_invalid_input[AC-040]
+tests/test_acceptance.py::test_invalid_input[AC-041]
+tests/test_acceptance.py::test_invalid_input[AC-042]
+tests/test_acceptance.py::test_invalid_input[AC-043]
+tests/test_acceptance.py::test_valid_ticket_end_to_end[AC-015]
+tests/test_acceptance.py::test_valid_ticket_end_to_end[AC-021]
+tests/test_acceptance.py::test_valid_ticket_end_to_end[AC-039]
+tests/test_acceptance.py::test_invalid_input_end_to_end[AC-024a]
+tests/test_acceptance.py::test_invalid_input_end_to_end[AC-025a]
+tests/test_acceptance.py::test_invalid_input_end_to_end[AC-040]
+tests/test_acceptance.py::test_invalid_input_end_to_end[AC-042]
+tests/test_acceptance.py::test_invalid_input_end_to_end[AC-043]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-001]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-002]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-003]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-004]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-005]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-006]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-007]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-008]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-009]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-010]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-011]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-012]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-013]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-014]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-015]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-016]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-017]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-018]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-019]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-020]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-021]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-022]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-023]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-034]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-035]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-036]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-037]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-038]
+tests/test_acceptance.py::test_sc003_repeat_valid[AC-039]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-024a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-024b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-025a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-025b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-026d]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-027a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-027b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-027c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028d]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-028e]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-029d]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-030a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-030b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-030c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-031a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-031b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-032]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033a]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033b]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033c]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033d]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033e]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033f]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033g]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033h]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-033i]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-040]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-041]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-042]
+tests/test_acceptance.py::test_sc003_repeat_invalid[AC-043]
+tests/test_acceptance.py::test_sc003_repeat_end_to_end
+
+145 tests collected in 0.01s
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m ruff --version
+--- exit code: 0
+--- stdout ---
+ruff 0.17.3
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m bandit --version
+--- exit code: 0
+--- stdout ---
+python.exe -m bandit 1.9.4
+  python version = 3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1A\.venv\Scripts\python.exe -m pytest --version
+--- exit code: 0
+--- stdout ---
+pytest 9.2.0
+
+--- stderr ---
+
+
+$ git rev-parse HEAD
+--- exit code: 0
+--- stdout ---
+714007b565b1e25ed2d7b296efb28481b3ef8ea1
+
+--- stderr ---
+

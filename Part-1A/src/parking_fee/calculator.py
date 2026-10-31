@@ -23,8 +23,13 @@ def calculate_fee(
     if duration_minutes <= tariff.grace_minutes:
         parking_fee = 0
     else:
-        started_hours = (duration_minutes + 59) // 60
-        parking_fee = started_hours * tariff.rate_per_started_hour
+        complete_blocks = duration_minutes // 1440
+        remaining_minutes = duration_minutes % 1440
+        remaining_hours = (remaining_minutes + 59) // 60
+        parking_fee = complete_blocks * tariff.cap_per_day + min(
+            tariff.cap_per_day,
+            remaining_hours * tariff.rate_per_started_hour,
+        )
 
     lost_ticket_penalty = tariff.lost_ticket_penalty if lost_ticket else 0
     return {

@@ -56,7 +56,7 @@ description: "Implementation tasks for the Parking Fee Calculator"
 
 ### Implementation
 
-- [ ] T006 [US2] Complete the capped tariff calculation in `src/parking_fee/calculator.py`: for `D > 15`, use `q = D // 1440`, `r = D % 1440`, `remaining_hours = (r + 59) // 60`, and `q * cap + min(cap, remaining_hours * rate)`; keep all amounts and durations integer-only, the calculator pure, and the lost-ticket penalty independent of parking fee; satisfy FR-007–FR-011, NFR-002, AC-001–AC-023, and AC-034–AC-039.
+- [X] T006 [US2] Complete the capped tariff calculation in `src/parking_fee/calculator.py`: for `D > 15`, use `q = D // 1440`, `r = D % 1440`, `remaining_hours = (r + 59) // 60`, and `q * cap + min(cap, remaining_hours * rate)`; keep all amounts and durations integer-only, the calculator pure, and the lost-ticket penalty independent of parking fee; satisfy FR-007–FR-011, NFR-002, AC-001–AC-023, and AC-034–AC-039.
 
 **Checkpoint**: Grace, hourly rounding, full-day blocks, caps, and lost-ticket combinations match the specified end-to-end results.
 

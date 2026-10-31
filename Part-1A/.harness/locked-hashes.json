@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-10-31T15:51:48+00:00",
+  "note": "SHA-256 of files the coding agent must not change. Re-lock only by a deliberate human decision and record the reason in evidence/spec-change-log.md.",
+  "files": {
+    "tests/conftest.py": "42275940e27872b2609cad8ae40d3d5178adb6a2cec45bf4bb7bece492f5a494",
+    "tests/test_acceptance.py": "2f79414df5adb402af9f646af20b9174dd6785309b01d95ff50a72ad3d3fe96e",
+    ".harness/coveragerc": "55da75cdc9b9e14d00d251afa20e3e6e88a9de8bb2f216c8d584ec26c4ff7821",
+    ".harness/pytest.ini": "e0e76b5c1594195370b29d46d4415e9f04d239fd3e34c9aed198298008736055",
+    ".harness/README.md": "aff4903826c695c661cbd04fedd672b785ba31c3a2c5cc2b5d751c1e4e095316",
+    ".harness/requirements.txt": "b78b6d4ee2464f883d1f85ac071b8e75785fe3a84f6dd95ae85056b7129be904",
+    ".harness/ruff.toml": "06a8754d5e46015669bf0d29eb162cac2082f73d8825eb3d0743b19fb1a5231c",
+    ".harness/run_harness.py": "c2cf76941c1f48a9f8e17fee7f0b5090044257ba5870c5b8b4e1a4259e8f1a9f",
+    "specs/001-parking-fee-calculator/spec.md": "fcc870f27960f1db80ad5509b7935928d78651a4a83de347dd8a11c4560f6540",
+    ".specify/memory/constitution.md": "f7516c9bb8d840134ee27a2d564e1d7e38d6809e73ae4d2fa965454afd1d1035"
+  }
+}

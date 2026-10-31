@@ -1,0 +1,3 @@
+Oct 31 - 12:55 PM - I found the first-day cap gap myself, 
+Copilot invented the duplicate-key rule and I kept it - duplicate property names in the JSON are an error (FR-003 and AC-026d). It actually closes a real ambiguity, because Python normally lets the last duplicate silently win.
+The unreadable-file case wasn’t testable on Windows, and the agent hung on one big request, so I split it.

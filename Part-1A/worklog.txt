@@ -1,3 +1,0 @@
-Oct 31 - 12:49 PM - Two principles that will drive a technical decision - "integer rupees and whole minutes” decides how timestamps and money are parsed, and “pure calculation function with no I/O” decides how the code is split into modules.
-
-Oct 31 - 03:00 PM - In your worklog, in your own words, write one decision from the plan and why it fits the requirements. The epoch-minute arithmetic (it avoids floats, as the constitution requires) or the manual argument handling (it avoids argparse’s multi-line errors, as FR-013 requires) are good candidates. This is also raw material for Reflection Question 1.

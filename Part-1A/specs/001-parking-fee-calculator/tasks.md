@@ -19,7 +19,7 @@ description: "Implementation tasks for the Parking Fee Calculator"
 
 **Purpose**: Create the application package and its shared tariff source.
 
-- [ ] T001 Create the package initializer in `src/parking_fee/__init__.py` and define the frozen tariff record plus one immutable vehicle-keyed tariff mapping in `src/parking_fee/tariff.py`, using a 15-minute grace period and 200-rupee lost-ticket penalty for both vehicles, 20 rupees/hour and a 150-rupee cap for `two_wheeler`, and 40 rupees/hour and a 300-rupee cap for `car`; satisfy FR-007, NFR-002, AC-005–AC-022, and AC-034–AC-039.
+- [X] T001 Create the package initializer in `src/parking_fee/__init__.py` and define the frozen tariff record plus one immutable vehicle-keyed tariff mapping in `src/parking_fee/tariff.py`, using a 15-minute grace period and 200-rupee lost-ticket penalty for both vehicles, 20 rupees/hour and a 150-rupee cap for `two_wheeler`, and 40 rupees/hour and a 300-rupee cap for `car`; satisfy FR-007, NFR-002, AC-005–AC-022, and AC-034–AC-039.
 
 ---
 
@@ -37,10 +37,10 @@ description: "Implementation tasks for the Parking Fee Calculator"
 
 ### Implementation
 
-- [ ] T002 [US1] Implement the pure integer-only calculation in `src/parking_fee/calculator.py`: accept the normalized ticket fields `entry_minute`, `exit_minute`, `vehicle_type`, and `lost_ticket`; calculate whole-minute duration, zero parking fee through 15 minutes, started-hour billing after grace without subtracting grace, and the independent lost-ticket penalty; return exactly `duration_minutes`, `lost_ticket_penalty`, `parking_fee`, `total_fee`, and `vehicle_type`; satisfy FR-008–FR-009 and FR-011, NFR-002, AC-001–AC-010, AC-015–AC-016, and AC-020–AC-022.
-- [ ] T003 [US1] Implement the valid-ticket path in `src/parking_fee/parsing.py`: read a valid supplied file as bytes, decode strict UTF-8 JSON, require an object with string `entry`, `exit`, and `vehicle_type`, default an omitted `lost_ticket` to `false`, validate timestamp shape/calendar/time and supported vehicle values, reject exit-before-entry, and return integer ordinal-minute indices plus normalized fields for T002; satisfy FR-004–FR-006, NFR-002, AC-001–AC-023, and AC-034–AC-039.
-- [ ] T004 [US1] Implement the success path and reusable interfaces in `src/parking_fee/cli.py`: provide `main(argv)` that passes one input path through parsing and calculation, serializes the five result fields with sorted keys and compact separators, and writes UTF-8 result bytes followed by exactly one LF to `sys.stdout.buffer` with no success output on stderr; satisfy FR-012, NFR-001, AC-001–AC-023, and AC-034–AC-039.
-- [ ] T005 [US1] Implement the module entry point in `src/parking_fee/__main__.py` by passing `sys.argv[1:]` to `cli.main` and returning its exit status through `SystemExit`, so `python -m parking_fee <path>` invokes the application; satisfy FR-012, NFR-001, AC-015–AC-016.
+- [X] T002 [US1] Implement the pure integer-only calculation in `src/parking_fee/calculator.py`: accept the normalized ticket fields `entry_minute`, `exit_minute`, `vehicle_type`, and `lost_ticket`; calculate whole-minute duration, zero parking fee through 15 minutes, started-hour billing after grace without subtracting grace, and the independent lost-ticket penalty; return exactly `duration_minutes`, `lost_ticket_penalty`, `parking_fee`, `total_fee`, and `vehicle_type`; satisfy FR-008–FR-009 and FR-011, NFR-002, AC-001–AC-010, AC-015–AC-016, and AC-020–AC-022.
+- [X] T003 [US1] Implement the valid-ticket path in `src/parking_fee/parsing.py`: read a valid supplied file as bytes, decode strict UTF-8 JSON, require an object with string `entry`, `exit`, and `vehicle_type`, default an omitted `lost_ticket` to `false`, validate timestamp shape/calendar/time and supported vehicle values, reject exit-before-entry, and return integer ordinal-minute indices plus normalized fields for T002; satisfy FR-004–FR-006, NFR-002, AC-001–AC-023, and AC-034–AC-039.
+- [X] T004 [US1] Implement the success path and reusable interfaces in `src/parking_fee/cli.py`: provide `main(argv)` that passes one input path through parsing and calculation, serializes the five result fields with sorted keys and compact separators, and writes UTF-8 result bytes followed by exactly one LF to `sys.stdout.buffer` with no success output on stderr; satisfy FR-012, NFR-001, AC-001–AC-023, and AC-034–AC-039.
+- [X] T005 [US1] Implement the module entry point in `src/parking_fee/__main__.py` by passing `sys.argv[1:]` to `cli.main` and returning its exit status through `SystemExit`, so `python -m parking_fee <path>` invokes the application; satisfy FR-012, NFR-001, AC-015–AC-016.
 
 **Checkpoint**: The valid AC-015 and AC-016 tickets run end to end with exact successful output.
 

@@ -153,6 +153,17 @@ For every error case below, the exact expected exit status is `2`, standard outp
 | **AC-032** | FR-006, FR-013 | Argument: `ticket.json`; content: `{"entry":"2026-01-01 11:00","exit":"2026-01-01 10:59","vehicle_type":"car","lost_ticket":false}`. | `error: exit must not be earlier than entry` |
 | **AC-033** | FR-001 through FR-006, FR-013 | Run the following precedence vectors independently. (a) Two arguments `missing-a.json`, `missing-b.json` → `error: expected exactly one input file path`. (b) One argument `missing.json`, path absent → `error: cannot read input file`. (c) `ticket.json` contains `{[` → `error: input must be valid JSON`. (d) `ticket.json` contains `[]` → `error: input must be a JSON object`. (e) `ticket.json` contains `{"entry":"bad","exit":"bad","vehicle_type":"unknown","lost_ticket":null}` → `error: entry must be a timestamp in YYYY-MM-DD HH:MM format`. (f) `ticket.json` contains `{"entry":"2026-01-01 10:00","exit":"bad","vehicle_type":"unknown","lost_ticket":null}` → `error: exit must be a timestamp in YYYY-MM-DD HH:MM format`. (g) `ticket.json` contains `{"entry":"2026-01-01 11:00","exit":"2026-01-01 10:59","vehicle_type":"unknown","lost_ticket":null}` → `error: vehicle_type must be one of: two_wheeler, car`. (h) `ticket.json` contains `{"entry":"2026-01-01 11:00","exit":"2026-01-01 10:59","vehicle_type":"car","lost_ticket":null}` → `error: lost_ticket must be true or false`. (i) `ticket.json` contains `{"entry":"2026-01-01 11:00","exit":"2026-01-01 10:59","vehicle_type":"car","lost_ticket":false}` → `error: exit must not be earlier than entry`. | For each vector, standard error MUST equal the exact quoted message for that vector followed by one LF (`\n`); standard output is empty and exit status is `2`. |
 
+For the following additional success cases, invoke the command with exactly the argument `ticket.json`; the file contains exactly the listed UTF-8 JSON text with no trailing bytes. The expected standard output is the listed JSON text followed by one LF (`\n`); the exit status is `0` and standard error is empty.
+
+| ID | Verifies | Exact input file content | Exact expected standard output |
+|---|---|---|---|
+| **AC-034** | FR-007, FR-010, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-01 17:00","vehicle_type":"car"}` | `{"duration_minutes":420,"lost_ticket_penalty":0,"parking_fee":280,"total_fee":280,"vehicle_type":"car"}` |
+| **AC-035** | FR-007, FR-010, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-01 17:01","vehicle_type":"car"}` | `{"duration_minutes":421,"lost_ticket_penalty":0,"parking_fee":300,"total_fee":300,"vehicle_type":"car"}` |
+| **AC-036** | FR-007, FR-010, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-01 17:00","vehicle_type":"two_wheeler"}` | `{"duration_minutes":420,"lost_ticket_penalty":0,"parking_fee":140,"total_fee":140,"vehicle_type":"two_wheeler"}` |
+| **AC-037** | FR-007, FR-010, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-01 17:01","vehicle_type":"two_wheeler"}` | `{"duration_minutes":421,"lost_ticket_penalty":0,"parking_fee":150,"total_fee":150,"vehicle_type":"two_wheeler"}` |
+| **AC-038** | FR-006, FR-007, FR-009, FR-012 | `{"entry":"2026-12-31 23:50","exit":"2027-01-01 00:10","vehicle_type":"car"}` | `{"duration_minutes":20,"lost_ticket_penalty":0,"parking_fee":40,"total_fee":40,"vehicle_type":"car"}` |
+| **AC-039** | FR-006, FR-007, FR-010, FR-012 | `{"entry":"2028-02-28 12:00","exit":"2028-03-01 12:00","vehicle_type":"car"}` | `{"duration_minutes":2880,"lost_ticket_penalty":0,"parking_fee":600,"total_fee":600,"vehicle_type":"car"}` |
+
 ### Key Entities *(include if feature involves data)*
 
 - **Parking ticket**: One input record containing entry and exit timestamps, a vehicle type, and an optional lost-ticket flag; unrelated properties are ignored.
@@ -163,7 +174,7 @@ For every error case below, the exact expected exit status is `2`, standard outp
 
 ### Measurable Outcomes
 
-- **SC-001**: All valid-input cases AC-001 through AC-023 produce the exact specified exit status and output line, with no additional standard output or standard error.
+- **SC-001**: All valid-input cases AC-001 through AC-023 and AC-034 through AC-039 produce the exact specified exit status and output line, with no additional standard output or standard error.
 - **SC-002**: All invalid-input cases AC-024 through AC-033 produce exit status 2, empty standard output, and only the exact specified error line on standard error.
 - **SC-003**: Repeating any acceptance case with identical arguments, file bytes, and file availability produces identical output bytes and exit status.
 

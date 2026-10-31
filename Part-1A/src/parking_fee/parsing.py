@@ -3,7 +3,7 @@ import os
 import re
 import stat
 from datetime import date
-from enum import Enum
+from enum import StrEnum
 from typing import TypedDict
 
 from parking_fee.tariff import VehicleType
@@ -12,7 +12,7 @@ from parking_fee.tariff import VehicleType
 _TIMESTAMP_PATTERN = re.compile(r"[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}")
 
 
-class ErrorCode(str, Enum):
+class ErrorCode(StrEnum):
     ARGUMENT_COUNT = "argument_count"
     CANNOT_READ_FILE = "cannot_read_file"
     INVALID_JSON = "invalid_json"

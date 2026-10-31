@@ -63,7 +63,8 @@ implemented in `src/` only. The coding agent MUST NOT modify the specification,
 disable lint or security checks; bypass mandatory harness gates; or manually edit
 recorded harness results. Specification artifacts MAY be changed only through the
 Spec Kit commands `specify`, `clarify`, `plan`, and `tasks`; every legitimate
-specification change MUST record its reason.
+specification change MUST record its reason. Marking completed tasks in `tasks.md` 
+during implementation is permitted.
 
 Solutions MUST prefer simplicity and maintainability over unnecessary complexity.
 

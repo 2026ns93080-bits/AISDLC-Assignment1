@@ -52,7 +52,7 @@ A user receives one stable, actionable error message when the argument, file, or
 
 **Why this priority**: Clear failure behavior lets users correct an input instead of mistaking an invalid ticket for a valid bill.
 
-**Independent Test**: Supply each invalid argument/file/ticket vector and verify the exit status, empty standard output, exact error line, and precedence in AC-024 through AC-033.
+**Independent Test**: Supply each invalid argument/file/ticket vector and verify the exit status, empty standard output, exact error line, and precedence in AC-024 through AC-033 and AC-040 through AC-042.
 
 **Acceptance Scenarios**:
 
@@ -61,12 +61,12 @@ A user receives one stable, actionable error message when the argument, file, or
 
 ### Edge Cases
 
-- Entry and exit may be equal; this yields a zero-minute stay (AC-001 and AC-002).
-- Stays of exactly 0, 15, 16, 60, 61, 1440, and 1441 minutes are explicitly covered for both vehicle types (AC-001 through AC-014).
-- A remainder of 15 minutes after a full 24-hour block is billed as a started hour; grace applies to the whole stay only (AC-017).
-- A partial 24-hour block is capped independently from each full 24-hour block (AC-018 and AC-019).
-- Missing, unreadable, empty, malformed, wrongly encoded, wrongly shaped, and invalid-field inputs produce the defined errors (AC-025 through AC-032).
-- Extra ticket properties are ignored (AC-023).
+- Valid zero-duration, grace-period, hourly-rounding, and single- and multi-day tariff cases cover both vehicle types, including lost-ticket handling (AC-001 through AC-023).
+- Additional valid cases cover hourly-cap boundaries, a year transition, and a leap-year transition (AC-034 through AC-039).
+- Invalid argument counts produce the argument-count error (AC-024); missing input paths and directory paths produce the file-read error (AC-025); a sole `--help` argument is treated as a missing input-file path (AC-040).
+- Empty, wrongly encoded, malformed, duplicate-key, or byte-order-mark-prefixed JSON produces the JSON error; valid JSON with a non-object top-level value produces the object error (AC-026, AC-027, and AC-042).
+- Invalid entry and exit timestamps, including an entry timestamp with fullwidth digits, produce their respective timestamp errors (AC-028, AC-029, and AC-041).
+- Invalid vehicle types, invalid lost-ticket values, earlier exit times, and validation-precedence conflicts produce the defined errors (AC-030 through AC-033).
 
 ## Requirements *(mandatory)*
 
@@ -130,7 +130,7 @@ For all success cases below, invoke the command with exactly the argument `ticke
 | **AC-014** | FR-007, FR-010, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-02 10:01","vehicle_type":"two_wheeler"}` | `{"duration_minutes":1441,"lost_ticket_penalty":0,"parking_fee":170,"total_fee":170,"vehicle_type":"two_wheeler"}` |
 | **AC-015** | FR-007, FR-009, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-01 13:10","vehicle_type":"car"}` | `{"duration_minutes":190,"lost_ticket_penalty":0,"parking_fee":160,"total_fee":160,"vehicle_type":"car"}` |
 | **AC-016** | FR-007, FR-009, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-01 13:10","vehicle_type":"two_wheeler"}` | `{"duration_minutes":190,"lost_ticket_penalty":0,"parking_fee":80,"total_fee":80,"vehicle_type":"two_wheeler"}` |
-| **AC-017** | FR-008, FR-010, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-02 10:15","vehicle_type":"car"}` | `{"duration_minutes":1455,"lost_ticket_penalty":0,"parking_fee":340,"total_fee":340,"vehicle_type":"car"}` |
+| **AC-017** | FR-009, FR-010, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-02 10:15","vehicle_type":"car"}` | `{"duration_minutes":1455,"lost_ticket_penalty":0,"parking_fee":340,"total_fee":340,"vehicle_type":"car"}` |
 | **AC-018** | FR-007, FR-010, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-02 19:20","vehicle_type":"car"}` | `{"duration_minutes":2000,"lost_ticket_penalty":0,"parking_fee":600,"total_fee":600,"vehicle_type":"car"}` |
 | **AC-019** | FR-007, FR-010, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-02 19:20","vehicle_type":"two_wheeler"}` | `{"duration_minutes":2000,"lost_ticket_penalty":0,"parking_fee":300,"total_fee":300,"vehicle_type":"two_wheeler"}` |
 | **AC-020** | FR-008, FR-011, FR-012 | `{"entry":"2026-01-01 10:00","exit":"2026-01-01 10:00","vehicle_type":"car","lost_ticket":true}` | `{"duration_minutes":0,"lost_ticket_penalty":200,"parking_fee":0,"total_fee":200,"vehicle_type":"car"}` |
@@ -143,7 +143,7 @@ For every error case below, the exact expected exit status is `2`, standard outp
 | ID | Verifies | Exact invocation and input | Exact expected standard error |
 |---|---|---|---|
 | **AC-024** | FR-001, FR-013 | Invoke once with no arguments, and once with exactly `missing-a.json` and `missing-b.json` as two arguments. No file needs to exist. | `error: expected exactly one input file path` |
-| **AC-025** | FR-002, FR-013 | Test (a) argument `missing.json`, whose path does not exist; (b) argument `unreadable.json`, which exists but cannot be opened for reading. | `error: cannot read input file` |
+| **AC-025** | FR-002, FR-013 | Test (a) argument `missing.json`, whose path does not exist; (b) argument `directory`, whose path exists and refers to a directory. | `error: cannot read input file` |
 | **AC-026** | FR-003, FR-013 | Argument: `ticket.json`; test each exact file content: (a) zero bytes, (b) the single byte `0xFF`, (c) the two-byte text `{` followed by `[` (`{[`), (d) `{"entry":"2026-01-01 10:00","entry":"2026-01-01 11:00","exit":"2026-01-01 12:00","vehicle_type":"car"}`. | `error: input must be valid JSON` |
 | **AC-027** | FR-003, FR-013 | Argument: `ticket.json`; test each valid JSON content that is not an object: `[]`, `null`, and `"ticket"`. | `error: input must be a JSON object` |
 | **AC-028** | FR-004, FR-005, FR-013 | Argument: `ticket.json`; test each content: (a) `{"exit":"2026-01-01 11:00","vehicle_type":"car"}`; (b) `{"entry":1,"exit":"2026-01-01 11:00","vehicle_type":"car"}`; (c) `{"entry":"2026-1-01 10:00","exit":"2026-01-01 11:00","vehicle_type":"car"}`; (d) `{"entry":"2026-02-29 10:00","exit":"2026-03-01 10:00","vehicle_type":"car"}`; (e) `{"entry":"2026-01-01 24:00","exit":"2026-01-02 10:00","vehicle_type":"car"}`. | `error: entry must be a timestamp in YYYY-MM-DD HH:MM format` |
@@ -152,6 +152,9 @@ For every error case below, the exact expected exit status is `2`, standard outp
 | **AC-031** | FR-004, FR-013 | Argument: `ticket.json`; test each content: (a) `{"entry":"2026-01-01 10:00","exit":"2026-01-01 11:00","vehicle_type":"car","lost_ticket":null}`; (b) `{"entry":"2026-01-01 10:00","exit":"2026-01-01 11:00","vehicle_type":"car","lost_ticket":"true"}`. | `error: lost_ticket must be true or false` |
 | **AC-032** | FR-006, FR-013 | Argument: `ticket.json`; content: `{"entry":"2026-01-01 11:00","exit":"2026-01-01 10:59","vehicle_type":"car","lost_ticket":false}`. | `error: exit must not be earlier than entry` |
 | **AC-033** | FR-001 through FR-006, FR-013 | Run the following precedence vectors independently. (a) Two arguments `missing-a.json`, `missing-b.json` → `error: expected exactly one input file path`. (b) One argument `missing.json`, path absent → `error: cannot read input file`. (c) `ticket.json` contains `{[` → `error: input must be valid JSON`. (d) `ticket.json` contains `[]` → `error: input must be a JSON object`. (e) `ticket.json` contains `{"entry":"bad","exit":"bad","vehicle_type":"unknown","lost_ticket":null}` → `error: entry must be a timestamp in YYYY-MM-DD HH:MM format`. (f) `ticket.json` contains `{"entry":"2026-01-01 10:00","exit":"bad","vehicle_type":"unknown","lost_ticket":null}` → `error: exit must be a timestamp in YYYY-MM-DD HH:MM format`. (g) `ticket.json` contains `{"entry":"2026-01-01 11:00","exit":"2026-01-01 10:59","vehicle_type":"unknown","lost_ticket":null}` → `error: vehicle_type must be one of: two_wheeler, car`. (h) `ticket.json` contains `{"entry":"2026-01-01 11:00","exit":"2026-01-01 10:59","vehicle_type":"car","lost_ticket":null}` → `error: lost_ticket must be true or false`. (i) `ticket.json` contains `{"entry":"2026-01-01 11:00","exit":"2026-01-01 10:59","vehicle_type":"car","lost_ticket":false}` → `error: exit must not be earlier than entry`. | For each vector, standard error MUST equal the exact quoted message for that vector followed by one LF (`\n`); standard output is empty and exit status is `2`. |
+| **AC-040** | FR-001, FR-002, FR-013 | Invoke with exactly one argument, `--help`, and ensure no file with that name exists at the path resolved by the command. | `error: cannot read input file` |
+| **AC-041** | FR-005, FR-013 | Argument: `ticket.json`; content: `{"entry":"２０２６-０１-０１ １０:００","exit":"2026-01-01 11:00","vehicle_type":"car"}`. | `error: entry must be a timestamp in YYYY-MM-DD HH:MM format` |
+| **AC-042** | FR-003, FR-013 | Argument: `ticket.json`; file bytes: a UTF-8 byte-order mark (`EF BB BF`) followed immediately by the valid JSON text `{"entry":"2026-01-01 10:00","exit":"2026-01-01 11:00","vehicle_type":"car"}`. | `error: input must be valid JSON` |
 
 For the following additional success cases, invoke the command with exactly the argument `ticket.json`; the file contains exactly the listed UTF-8 JSON text with no trailing bytes. The expected standard output is the listed JSON text followed by one LF (`\n`); the exit status is `0` and standard error is empty.
 
@@ -174,8 +177,8 @@ For the following additional success cases, invoke the command with exactly the 
 
 ### Measurable Outcomes
 
-- **SC-001**: All valid-input cases AC-001 through AC-023 and AC-034 through AC-039 produce the exact specified exit status and output line, with no additional standard output or standard error.
-- **SC-002**: All invalid-input cases AC-024 through AC-033 produce exit status 2, empty standard output, and only the exact specified error line on standard error.
+- **SC-001**: Every valid-input acceptance criterion (AC-001 through AC-023 and AC-034 through AC-039) produces the exact specified exit status and output line, with no additional standard output or standard error.
+- **SC-002**: All invalid-input cases AC-024 through AC-033 and AC-040 through AC-042 produce exit status 2, empty standard output, and only the exact specified error line on standard error.
 - **SC-003**: Repeating any acceptance case with identical arguments, file bytes, and file availability produces identical output bytes and exit status.
 
 ## Assumptions

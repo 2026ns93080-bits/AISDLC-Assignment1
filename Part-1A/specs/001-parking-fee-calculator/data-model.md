@@ -14,7 +14,7 @@ One JSON object represents one ticket (FR-001, FR-003–FR-004).
 | `lost_ticket` | boolean, optional | Defaults to `false` when absent; any present non-boolean value, including `null`, is invalid (FR-004). |
 | other properties | any valid JSON value | Ignored (FR-003). |
 
-The JSON input must be non-empty, strict UTF-8, and have no leading UTF-8 BOM. Its top-level value must be an object. Duplicate property names and non-standard constants (`NaN`, `Infinity`, `-Infinity`) are rejected (FR-003).
+The JSON input must be non-empty, strict UTF-8, and have no leading UTF-8 BOM. Its top-level value must be an object. Duplicate property names at any nesting depth and non-standard constants (`NaN`, `Infinity`, `-Infinity`) are rejected (FR-003; AC-043).
 
 ## Validated Ticket
 
@@ -58,7 +58,7 @@ Validation errors are decided in this order (FR-013):
 
 1. Argument count.
 2. Missing, non-regular, or unreadable file.
-3. Empty input, invalid UTF-8, BOM, duplicate-key JSON, malformed JSON, non-standard constant, or excessive nesting raising `RecursionError`.
+3. Empty input, invalid UTF-8, BOM, duplicate property names at any nesting depth, malformed JSON, non-standard constant, or excessive nesting raising `RecursionError`.
 4. Top-level JSON object.
 5. `entry` presence, type, shape, and real timestamp.
 6. `exit` presence, type, shape, and real timestamp.

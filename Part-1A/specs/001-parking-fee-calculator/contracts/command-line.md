@@ -12,12 +12,12 @@ with `src` on the Python import path (FR-001). An argument beginning with `-` is
 
 - Exactly one argument is required. Argument-count failure takes precedence over file access.
 - The path must refer to a regular file that can be fully opened and read as bytes.
-- The bytes must be non-empty strict UTF-8 with no leading UTF-8 BOM and parse as JSON. Duplicate property names and `NaN`, `Infinity`, or `-Infinity` are rejected.
+- The bytes must be non-empty strict UTF-8 with no leading UTF-8 BOM and parse as JSON. Duplicate property names at any nesting depth and `NaN`, `Infinity`, or `-Infinity` are rejected.
 - The top-level JSON value must be an object. `entry`, `exit`, and `vehicle_type` are required; unknown properties are ignored. `lost_ticket` is optional and defaults to `false`.
 - Timestamp strings must be exactly 16 characters in `YYYY-MM-DD HH:MM`, using ASCII `[0-9]` only, valid calendar dates, hours 00–23, and minutes 00–59. Exit must not precede entry.
 - `vehicle_type` must be `two_wheeler` or `car`; `lost_ticket`, if present, must be a JSON boolean.
 
-These rules and their order implement FR-001–FR-007 and AC-024–AC-033, AC-040–AC-042. The input data model is described in [data-model.md](../data-model.md).
+These rules and their order implement FR-001–FR-007 and AC-024–AC-033, AC-040–AC-043. The input data model is described in [data-model.md](../data-model.md).
 
 ## Success
 

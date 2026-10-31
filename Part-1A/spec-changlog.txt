@@ -1,0 +1,1 @@
+Oct 31 - 12:55 PM - Copilot asked and on confirmation added one requirement on my confirmation during specify: duplicate property names in the JSON are an error (FR-003 and AC-026d). It actually closes a real ambiguity, because Python normally lets the last duplicate silently win.

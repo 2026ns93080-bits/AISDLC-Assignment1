@@ -1,0 +1,2 @@
+Oct 31 - 12:49 PM - Two principles that will drive a technical decision - "integer rupees and whole minutes” decides how timestamps and money are parsed, and “pure calculation function with no I/O” decides how the code is split into modules.
+

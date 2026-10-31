@@ -8,6 +8,15 @@
 
 **Input**: User description: "Build a Parking Fee Calculator that reads one parking ticket from a JSON file and prints the fee."
 
+## Clarifications
+
+### Session 2026-10-31
+
+- Q: How should a sole command-line argument that starts with "-" (for example --help) be treated: as a file path, or as an option? → A: As a file path.
+- Q: Must every digit in a timestamp be an ASCII digit 0 through 9, with other Unicode digits rejected? → A: Yes; timestamp digits must be ASCII 0-9 only.
+- Q: What should count as an unreadable input file, including when the supplied path refers to a directory? → A: A path that is not a regular file, or whose contents cannot be fully opened and read as bytes.
+- Q: How should a UTF-8 byte-order mark at the very start of the input file be treated? → A: Reject it with the specified JSON error.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Calculate a parking fee (Priority: P1)
@@ -63,11 +72,11 @@ A user receives one stable, actionable error message when the argument, file, or
 
 ### Functional Requirements
 
-- **FR-001**: The command MUST accept exactly one command-line argument, interpreted as the input file path.
-- **FR-002**: The command MUST report a missing or unreadable input file using the specified file-read error.
-- **FR-003**: The input file MUST contain valid UTF-8 JSON whose top-level value is an object. An empty file, invalid UTF-8, invalid JSON, or an object with duplicate property names MUST use the specified JSON error. Properties other than `entry`, `exit`, `vehicle_type`, and `lost_ticket` MUST be ignored.
+- **FR-001**: The command MUST accept exactly one command-line argument, interpreted as the input file path, even when it starts with `-` (for example, `--help`).
+- **FR-002**: The command MUST report a missing path, a path that does not refer to a regular file (including a directory), or a file whose contents cannot be fully opened and read as bytes using the specified file-read error.
+- **FR-003**: The input file MUST contain valid UTF-8 JSON whose top-level value is an object. An empty file, invalid UTF-8, a UTF-8 byte-order mark at the start, invalid JSON, or an object with duplicate property names MUST use the specified JSON error. Properties other than `entry`, `exit`, `vehicle_type`, and `lost_ticket` MUST be ignored.
 - **FR-004**: The object MUST contain string values for `entry`, `exit`, and `vehicle_type`. `lost_ticket` MAY be omitted; when present it MUST be a JSON boolean, and omission MUST mean false.
-- **FR-005**: Each timestamp MUST be exactly 16 characters in the form `YYYY-MM-DD HH:MM`, with zero-padded fields, no seconds or time zone, and a real calendar date and time.
+- **FR-005**: Each timestamp MUST be exactly 16 characters in the form `YYYY-MM-DD HH:MM`, with zero-padded fields using ASCII digits `0` through `9` only, no seconds or time zone, and a real calendar date and time.
 - **FR-006**: The exit timestamp MUST be equal to or later than the entry timestamp. Duration MUST be the whole number of minutes between the two timestamps; equal timestamps yield zero.
 - **FR-007**: The default tariff data used by the calculation MUST use the following values:
 

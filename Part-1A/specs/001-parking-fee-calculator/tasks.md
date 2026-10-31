@@ -72,8 +72,8 @@ description: "Implementation tasks for the Parking Fee Calculator"
 
 ### Implementation
 
-- [ ] T007 [US3] Complete strict failure handling in `src/parking_fee/parsing.py`: require a regular file and fully read it in binary mode; reject empty bytes, a leading UTF-8 BOM, invalid UTF-8/JSON, duplicate object keys, non-finite JSON constants, parser recursion errors, and non-object top-level values; validate `entry`, `exit`, `vehicle_type`, `lost_ticket`, then chronological order in the specified precedence; expose explicit expected error codes and handle only expected boundary exceptions; satisfy FR-002–FR-006 and FR-013, NFR-003, AC-025–AC-033, AC-041–AC-042.
-- [ ] T008 [US3] Complete the failure contract in `src/parking_fee/cli.py`: check only `len(argv)` for exactly one argument, treat option-looking arguments as paths, map parser/file/argument error codes to the exact FR-013 messages, return 2, write no stdout bytes on failure, and write exactly one UTF-8 message line plus LF to `sys.stderr.buffer`; do not use an option parser or blanket exception handler; satisfy FR-001, FR-012–FR-013, NFR-001 and NFR-003, AC-024–AC-033, and AC-040–AC-042.
+- [ ] T007 [US3] Complete strict failure handling in `src/parking_fee/parsing.py`: require a regular file and fully read it in binary mode; reject empty bytes, a leading UTF-8 BOM, invalid UTF-8/JSON, duplicate object keys, non-finite JSON constants, parser recursion errors, and non-object top-level values; validate `entry`, `exit`, `vehicle_type`, `lost_ticket`, then chronological order in the specified precedence; expose explicit expected error codes and handle only expected boundary exceptions; satisfy FR-002–FR-006 and FR-013, NFR-003, AC-025–AC-033, AC-041–AC-043.
+- [ ] T008 [US3] Complete the failure contract in `src/parking_fee/cli.py`: check only `len(argv)` for exactly one argument, treat option-looking arguments as paths, map parser/file/argument error codes to the exact FR-013 messages, return 2, write no stdout bytes on failure, and write exactly one UTF-8 message line plus LF to `sys.stderr.buffer`; do not use an option parser or blanket exception handler; satisfy FR-001, FR-012–FR-013, NFR-001 and NFR-003, AC-024–AC-033, and AC-040–AC-043.
 
 **Checkpoint**: All invalid-input cases preserve first-failure precedence and emit only the contracted error output.
 
@@ -83,8 +83,8 @@ description: "Implementation tasks for the Parking Fee Calculator"
 
 **Purpose**: Run the human-owned quality gates and report any remaining acceptance gaps without changing protected files.
 
-- [ ] T009 Run the human-owned test suite with `python -m pytest` and run the existing `.harness/` gates using their prescribed invocation against `src/parking_fee/__init__.py`, `src/parking_fee/tariff.py`, `src/parking_fee/calculator.py`, `src/parking_fee/parsing.py`, `src/parking_fee/cli.py`, and `src/parking_fee/__main__.py`; report commands, pass/fail results, coverage and lint/security outcomes, and failures without editing any test, harness, or specification file; verify FR-001–FR-013, NFR-001–NFR-003, and AC-001–AC-042.
-- [ ] T010 Compare implemented behavior in `src/parking_fee/__init__.py`, `src/parking_fee/tariff.py`, `src/parking_fee/calculator.py`, `src/parking_fee/parsing.py`, `src/parking_fee/cli.py`, and `src/parking_fee/__main__.py` against AC-001 through AC-042, then list each unmet or unverifiable criterion and its evidence without changing any file; verify FR-001–FR-013, NFR-001–NFR-003, and AC-001–AC-042.
+- [ ] T009 Run the human-owned test suite with `python -m pytest` and run the existing `.harness/` gates using their prescribed invocation against `src/parking_fee/__init__.py`, `src/parking_fee/tariff.py`, `src/parking_fee/calculator.py`, `src/parking_fee/parsing.py`, `src/parking_fee/cli.py`, and `src/parking_fee/__main__.py`; report commands, pass/fail results, coverage and lint/security outcomes, and failures without editing any test, harness, or specification file; verify FR-001–FR-013, NFR-001–NFR-003, and AC-001–AC-043.
+- [ ] T010 Compare implemented behavior in `src/parking_fee/__init__.py`, `src/parking_fee/tariff.py`, `src/parking_fee/calculator.py`, `src/parking_fee/parsing.py`, `src/parking_fee/cli.py`, and `src/parking_fee/__main__.py` against AC-001 through AC-043, then list each unmet or unverifiable criterion and its evidence without changing any file; verify FR-001–FR-013, NFR-001–NFR-003, and AC-001–AC-043.
 
 ---
 
@@ -97,7 +97,7 @@ description: "Implementation tasks for the Parking Fee Calculator"
 3. T003 implements ticket parsing and normalization.
 4. T004 implements CLI behavior; T005 adds the `python -m parking_fee` entry point.
 5. T006 completes tariff-cap behavior; T007 and T008 add strict validation and failure output without changing the module dependency order.
-6. T009 runs the human-owned gates; T010 performs the final AC-001–AC-042 gap comparison.
+6. T009 runs the human-owned gates; T010 performs the final AC-001–AC-043 gap comparison.
 
 ### User-story dependencies
 

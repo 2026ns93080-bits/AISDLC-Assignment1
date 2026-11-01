@@ -4,7 +4,7 @@
 
 **Created**: 2026-11-01
 
-**Status**: Draft
+**Status**: Approved
 
 **Input**: Build a library function and command-line tool that turn one customer support ticket into a structured triage decision with language-model assistance.
 
@@ -109,7 +109,7 @@ The valid shipping reply `S` is:
 14. **AC-014**: With any valid input and a raw reply equal to `T` except that `summary` is `"Card 4111111111111111"`, the library raises `InvalidModelOutput` carrying that exact raw reply.
 15. **AC-015**: With any valid input and a raw reply consisting of an opening line of three backticks followed by `json`, a newline, the exact text of `T`, a newline, and a closing line of three backticks, the library raises `InvalidModelOutput` carrying the exact fenced raw reply.
 16. **AC-016**: With any valid input and a raw reply equal to the valid refusal object except that `refusal_reason` is `"invalid_input"`, the library raises `InvalidModelOutput` carrying that exact raw reply.
-17. **AC-017**: With any valid input and a raw reply equal to `T` except that `summary` contains `sk-12345678901234567890`, the library raises `InvalidModelOutput` carrying that exact raw reply.
+17. **AC-017**: With any valid input and a raw reply equal to `T` except that `summary` contains `sk-abcdefghijklmnopqrstuv`, the library raises `InvalidModelOutput` carrying that exact raw reply; the API-key invariant is the only violated invariant.
 18. **AC-018**: With any valid input and a raw reply equal to `T` except that `summary` contains the literal text `OPENAI_API_KEY`, the library raises `InvalidModelOutput` carrying that exact raw reply.
 19. **AC-019**: If the model call times out, the library raises `ServiceError`; its message is exactly `Model service unavailable.` and contains neither the configured key nor underlying timeout text.
 20. **AC-020**: If authentication fails, the library raises `ServiceError`; its message is exactly `Model service unavailable.` and contains neither the configured key nor underlying authentication text.
@@ -138,6 +138,10 @@ The valid shipping reply `S` is:
 43. **AC-043**: Given a completed run with no `ERROR` cases, all cases contract-valid and invariant-valid, every guardrail case passing, and aggregate score exactly `0.85`, the result is `PASS`; if any one of these conditions is false, the result is not `PASS`.
 44. **AC-044**: With an input file whose bytes are a UTF-8 byte-order mark followed by `"My card was charged twice; please refund one charge."` and reply `T`, the command-line tool produces exactly the standard output, standard error, and exit status specified in AC-022.
 45. **AC-045**: With an input file containing 3999 `x` characters followed by CR LF (4001 characters total), the command-line tool produces the invalid-input decision specified in AC-025, writes nothing to standard error, makes zero model calls, and exits 0.
+46. **AC-046**: With any valid input and a raw reply equal to `T` except that `summary` is `"Order 123456789012 delayed"`, the library returns the six values unchanged.
+47. **AC-047**: With any valid input and a raw reply equal to `T` except that `summary` is `"Order 1234567890123 delayed"`, the library raises `InvalidModelOutput` carrying that exact raw reply.
+48. **AC-048**: With any valid input and a raw reply equal to `T` except that `summary` contains `sk-abcdefghijklmnopqrs`, the library returns the six values unchanged.
+49. **AC-049**: With any valid input and a raw reply equal to `T` except that `summary` contains `sk-abcdefghijklmnopqrst`, the library raises `InvalidModelOutput` carrying that exact raw reply.
 
 ### Edge Cases
 
@@ -146,10 +150,15 @@ The valid shipping reply `S` is:
 - Empty and whitespace-only tickets are refused even though the model is available.
 - A model reply must be a JSON object with exactly the contract keys; arrays, additional properties, malformed JSON, and fenced JSON are invalid.
 - A structurally valid reply is still invalid if any invariant or privacy rule fails.
+- A summary with 12 consecutive digits is allowed by AC-046, while 13 digits are rejected by AC-047. The API-key pattern boundary is covered by AC-017 and AC-048–AC-049: the 22-letter and 20-letter samples are rejected, while the 19-letter sample is returned unchanged.
 - A ticket that is itself an attempt to control the assistant is refused, while instructions embedded in a genuine support request are ignored.
 - The command-line tool must not print a partial or success-shaped decision when file reading, model service, or response validation fails.
 
 ## Requirements *(mandatory)*
+
+### Non-Functional Requirements
+
+- **NFR-001**: The model dependency MUST be replaceable by a test double through both the library function and the command-line main function, so tests can control replies and failures without a network or an API key.
 
 ### Decision Contract
 
@@ -240,11 +249,10 @@ Priority meanings:
 
 - **SC-001**: 100% of returned decisions contain exactly six keys and meet every applicable type, enumeration, action-consistency, and length rule.
 - **SC-002**: 100% of empty, whitespace-only, and 4001-character inputs are refused before a model call; 100% of 4000-character inputs pass the input-length guard and make exactly one model call.
-- **SC-003**: 100% of invalid model replies in the specified acceptance cases raise `InvalidModelOutput` with the exact raw reply; none is repaired or returned as a decision.
+- **SC-003**: AC-017, AC-047, and AC-049 raise `InvalidModelOutput` with the exact raw reply, while AC-046 and AC-048 return the six values unchanged; none is repaired or rewritten.
 - **SC-004**: 100% of tested service failures raise `ServiceError` without exposing a key or underlying error text.
 - **SC-005**: 100% of command-line decision and failure cases produce the prescribed standard output, standard error, and exit status.
 - **SC-006**: A completed evaluation with no `ERROR` cases passes only when every contract and invariant check succeeds, all guardrail cases pass, and the aggregate score is at least 0.85.
-- **SC-007**: In review of the defined evaluation cases, support reviewers correctly distinguish actionable triage, requests needing clarification, and refusals using the decision action and populated fields for 100% of reviewed cases, without relying on hidden context.
 
 ## Assumptions
 

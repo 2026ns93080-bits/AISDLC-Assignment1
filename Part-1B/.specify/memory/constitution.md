@@ -76,7 +76,8 @@ to create or modify those directories, though tasks MAY reference them for trace
 implementation and repair, the coding agent MAY change only `src/` and `prompts/`. It MUST NOT
 modify the specification, `tests/`, `evals/`, or `.harness/`; delete or weaken tests, assertions,
 or evaluation cases; change expected results; lower thresholds; disable guardrails, lint, or
-security checks; bypass harness gates; or manually edit recorded results.
+security checks; bypass harness gates; or manually edit recorded results. Marking completed tasks 
+in `tasks.md` during implementation is permitted.
 
 ## Governance
 

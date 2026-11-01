@@ -1,0 +1,107 @@
+{
+  "run": 4,
+  "label": "verify-committed-final",
+  "timestamp_utc": "2026-11-01T02:58:57+00:00",
+  "passed": true,
+  "gates": [
+    {
+      "name": "integrity",
+      "tool": "sha256",
+      "status": "PASS",
+      "command": "",
+      "exit_code": null,
+      "findings": [],
+      "details": {
+        "files_checked": 10
+      }
+    },
+    {
+      "name": "lint",
+      "tool": "ruff",
+      "status": "PASS",
+      "command": "ruff check --config .harness/ruff.toml --no-cache --output-format json src",
+      "exit_code": 0,
+      "findings": [],
+      "details": {
+        "violations": 0
+      }
+    },
+    {
+      "name": "security",
+      "tool": "bandit",
+      "status": "PASS",
+      "command": "bandit -r src -f json -q",
+      "exit_code": 0,
+      "findings": [],
+      "details": {
+        "low_severity_ignored": 0
+      }
+    },
+    {
+      "name": "policy",
+      "tool": "ast",
+      "status": "PASS",
+      "command": "",
+      "exit_code": null,
+      "findings": [],
+      "details": {
+        "files_checked": 6
+      }
+    },
+    {
+      "name": "tests",
+      "tool": "pytest",
+      "status": "PASS",
+      "command": "-m pytest tests -c .harness/pytest.ini --rootdir",
+      "exit_code": 0,
+      "findings": [],
+      "details": {
+        "total": 145,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0,
+        "coverage_percent": 95.8
+      }
+    },
+    {
+      "name": "coverage",
+      "tool": "pytest-cov",
+      "status": "PASS",
+      "command": "",
+      "exit_code": null,
+      "findings": [],
+      "details": {
+        "percent_covered": 95.8
+      }
+    },
+    {
+      "name": "traceability",
+      "tool": "spec+pytest",
+      "status": "PASS",
+      "command": "",
+      "exit_code": 0,
+      "findings": [],
+      "details": {
+        "acs_in_spec": 43,
+        "acs_with_tests": 43,
+        "tests_collected": 145
+      }
+    }
+  ],
+  "summary": {
+    "total": 145,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "coverage_percent": 95.8
+  },
+  "environment": {
+    "python": "3.14.4",
+    "platform": "win32",
+    "ruff": "ruff 0.17.3",
+    "bandit": "python.exe -m bandit 1.9.4",
+    "pytest": "pytest 9.2.0",
+    "git_commit": "b76bb58ff3af09208a012a688638818150fc6daf",
+    "src_tree_sha256": "f6b3d3633f3e89267fdfb5910fcaf52e7a9a3d4c542171b8ae9b4a72bbfe9a1d"
+  }
+}

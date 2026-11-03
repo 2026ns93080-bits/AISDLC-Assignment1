@@ -1,0 +1,3 @@
+Nov 1 - 09.50 PM - I found that AC-017 wasn’t isolated (the digits also tripped another invariant), that the evaluation had no rule for InvalidModelOutput, and that BOM and newline handling would have changed the 4000-character boundary silently.
+
+Nov 3 - 11.17 AM - I found that the key-handling rule and the retry rule had no acceptance criteria, that the InvalidModelOutput evaluation path was untested, and that FR-007 had no mechanical check. So ran clarify again.

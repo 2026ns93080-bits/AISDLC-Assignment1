@@ -1,0 +1,6 @@
+# Packages used by the application and by the independent harness (not installed by the agent).
+openai
+pytest>=8
+pytest-cov>=5
+ruff>=0.6
+bandit>=1.7

@@ -1,0 +1,8 @@
+[run]
+source = src/ticket_triage
+# Constitution: the only module excluded from the coverage gate is the thin OpenAI client,
+# which is exercised by the live evaluation (and by tests/test_openai_client.py).
+omit = */ticket_triage/openai_client.py
+
+[report]
+show_missing = True

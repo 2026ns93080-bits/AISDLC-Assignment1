@@ -54,4 +54,12 @@ The CLI must not print raw invalid replies or any partial/success-shaped JSON on
 
 ## Executable entry point and configuration
 
-`python -m ticket_triage` may load key/value entries from an untracked `.env` file in the Part-1B root via `env_loader.py`, setting only environment names not already set, then call `cli.main`. The library modules never read `.env`. The plan has not opened or read any `.env` file. Only `OPENAI_API_KEY` and `OPENAI_MODEL` are consumed by the OpenAI adapter.
+`env_loader.py` exposes exactly one public function:
+
+```text
+load_env(path: pathlib.Path) -> None
+```
+
+It reads `path` as UTF-8 and returns silently if the file is missing or unreadable. For each line, it strips surrounding whitespace and skips blank lines, lines starting with `#`, and lines without `=`. Otherwise it splits at the first `=`, strips whitespace around both the name and value, and sets `os.environ[name] = value` only when the name is nonempty and not already in `os.environ`. It never prints or logs anything and never raises for a malformed line.
+
+`__main__.py` imports `cli.main` and `env_loader.load_env`, calls `load_env(Path(__file__).resolve().parents[2] / ".env")` to locate `.env` in the Part-1B project root (the parent of `src`), then raises `SystemExit(cli.main(sys.argv[1:]))`. It contains no other logic and catches no exceptions. The library modules never read `.env`. The plan has not opened or read any `.env` file. Only `OPENAI_API_KEY` and `OPENAI_MODEL` are consumed by the OpenAI adapter.

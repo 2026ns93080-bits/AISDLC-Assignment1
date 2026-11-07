@@ -1,0 +1,193 @@
+{
+  "run": 1,
+  "label": "baseline-no-implementation",
+  "timestamp_utc": "2026-11-07T09:33:50+00:00",
+  "passed": false,
+  "gates": [
+    {
+      "name": "integrity",
+      "tool": "sha256",
+      "status": "PASS",
+      "command": "",
+      "exit_code": null,
+      "findings": [],
+      "details": {
+        "files_checked": 20
+      }
+    },
+    {
+      "name": "lint",
+      "tool": "ruff",
+      "status": "FAIL",
+      "command": "",
+      "exit_code": null,
+      "findings": [
+        {
+          "gate": "lint",
+          "code": "SRC_MISSING",
+          "message": "src/ticket_triage does not exist yet.",
+          "location": "src/ticket_triage",
+          "expected": "package present",
+          "observed": "missing"
+        }
+      ],
+      "details": {}
+    },
+    {
+      "name": "security",
+      "tool": "bandit",
+      "status": "FAIL",
+      "command": "",
+      "exit_code": null,
+      "findings": [
+        {
+          "gate": "security",
+          "code": "SRC_MISSING",
+          "message": "src/ticket_triage does not exist yet.",
+          "location": "src/ticket_triage",
+          "expected": "package present",
+          "observed": "missing"
+        }
+      ],
+      "details": {}
+    },
+    {
+      "name": "policy",
+      "tool": "ast",
+      "status": "FAIL",
+      "command": "",
+      "exit_code": null,
+      "findings": [
+        {
+          "gate": "policy",
+          "code": "SRC_MISSING",
+          "message": "src/ticket_triage does not exist yet.",
+          "location": "src/ticket_triage",
+          "expected": "package present",
+          "observed": "missing"
+        }
+      ],
+      "details": {}
+    },
+    {
+      "name": "prompt",
+      "tool": "text",
+      "status": "FAIL",
+      "command": "",
+      "exit_code": null,
+      "findings": [
+        {
+          "gate": "prompt",
+          "code": "PROMPT_MISSING",
+          "message": "prompts/system.md is missing or empty.",
+          "location": "prompts/system.md",
+          "expected": "",
+          "observed": ""
+        }
+      ],
+      "details": {}
+    },
+    {
+      "name": "tests",
+      "tool": "pytest",
+      "status": "FAIL",
+      "command": "-m pytest tests -c .harness/pytest.ini --rootdir",
+      "exit_code": 2,
+      "findings": [
+        {
+          "gate": "tests",
+          "code": "TEST_ERROR",
+          "message": "ModuleNotFoundError: No module named 'ticket_triage'",
+          "location": ".py::tests.test_contract",
+          "expected": "see message",
+          "observed": "ModuleNotFoundError: No module named 'ticket_triage'"
+        },
+        {
+          "gate": "tests",
+          "code": "TEST_ERROR",
+          "message": "ModuleNotFoundError: No module named 'ticket_triage'",
+          "location": ".py::tests.test_evaluator",
+          "expected": "see message",
+          "observed": "ModuleNotFoundError: No module named 'ticket_triage'"
+        },
+        {
+          "gate": "tests",
+          "code": "TEST_ERROR",
+          "message": "ModuleNotFoundError: No module named 'ticket_triage'",
+          "location": ".py::tests.test_openai_client",
+          "expected": "see message",
+          "observed": "ModuleNotFoundError: No module named 'ticket_triage'"
+        },
+        {
+          "gate": "tests",
+          "code": "TEST_ERROR",
+          "message": "ModuleNotFoundError: No module named 'ticket_triage'",
+          "location": ".py::tests.test_service",
+          "expected": "see message",
+          "observed": "ModuleNotFoundError: No module named 'ticket_triage'"
+        }
+      ],
+      "details": {
+        "total": 4,
+        "failed": 0,
+        "errors": 4,
+        "skipped": 0,
+        "coverage_percent": null
+      }
+    },
+    {
+      "name": "coverage",
+      "tool": "pytest-cov",
+      "status": "FAIL",
+      "command": "",
+      "exit_code": null,
+      "findings": [
+        {
+          "gate": "coverage",
+          "code": "NO_COVERAGE_DATA",
+          "message": "No coverage data was produced (tests may not have run).",
+          "location": "src/ticket_triage",
+          "expected": ">= 90.0%",
+          "observed": "no data"
+        }
+      ],
+      "details": {
+        "percent_covered": null
+      }
+    },
+    {
+      "name": "traceability",
+      "tool": "spec+pytest",
+      "status": "FAIL",
+      "command": "",
+      "exit_code": 2,
+      "findings": [
+        {
+          "gate": "traceability",
+          "code": "COLLECTION_FAILED",
+          "message": "pytest could not collect the tests.",
+          "location": "tests",
+          "expected": "tests collected",
+          "observed": "e.service import triage\nE   ModuleNotFoundError: No module named 'ticket_triage'\n=========================== short test summary info ===========================\nERROR tests/test_contract.py\nERROR tests/test_evaluator.py\nERROR tests/test_openai_client.py\nERROR tests/test_service.py\n!!!!!!!!!!!!!!!!!!! Interrupted: 4 errors during collection !!!!!!!!!!!!!!!!!!!\n32 tests collected, 4 errors in 0.61s\n"
+        }
+      ],
+      "details": {}
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "failed": 0,
+    "errors": 4,
+    "skipped": 0,
+    "coverage_percent": null
+  },
+  "environment": {
+    "python": "3.14.4",
+    "platform": "win32",
+    "ruff": "ruff 0.17.4",
+    "bandit": "python.exe -m bandit 1.9.4",
+    "pytest": "pytest 9.2.0",
+    "git_commit": "62f0f892e5111e9c1e280dca41af69cb123e9589",
+    "src_tree_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

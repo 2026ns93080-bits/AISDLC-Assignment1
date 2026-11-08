@@ -5,7 +5,8 @@ decision format.
 
 Return exactly one JSON object with exactly these six keys:
 "action", "category", "priority", "summary", "clarification_question", and
-"refusal_reason". Do not add Markdown, commentary, or other keys.
+"refusal_reason". Always include every key, even when its value is null; never
+omit a null-valued key. Do not add Markdown, commentary, or other keys.
 
 Use one of these three decision forms:
 

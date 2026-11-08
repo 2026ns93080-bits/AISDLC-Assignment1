@@ -1,0 +1,457 @@
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1B\.venv\Scripts\python.exe -m ruff check --config .harness/ruff.toml --no-cache --output-format json src
+--- exit code: 0
+--- stdout ---
+[]
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1B\.venv\Scripts\python.exe -m bandit -r src -f json -q
+--- exit code: 0
+--- stdout ---
+{
+  "errors": [],
+  "generated_at": "2026-11-08T09:36:01Z",
+  "metrics": {
+    "_totals": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 224,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\ticket_triage\\__main__.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 6,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\ticket_triage\\cli.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 35,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\ticket_triage\\contract.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 96,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\ticket_triage\\env_loader.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 19,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\ticket_triage\\errors.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 7,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\ticket_triage\\guard.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 11,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\ticket_triage\\model_client.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 4,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\ticket_triage\\openai_client.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 23,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\ticket_triage\\prompts.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 6,
+      "nosec": 0,
+      "skipped_tests": 0
+    },
+    "src\\ticket_triage\\service.py": {
+      "CONFIDENCE.HIGH": 0,
+      "CONFIDENCE.LOW": 0,
+      "CONFIDENCE.MEDIUM": 0,
+      "CONFIDENCE.UNDEFINED": 0,
+      "SEVERITY.HIGH": 0,
+      "SEVERITY.LOW": 0,
+      "SEVERITY.MEDIUM": 0,
+      "SEVERITY.UNDEFINED": 0,
+      "loc": 17,
+      "nosec": 0,
+      "skipped_tests": 0
+    }
+  },
+  "results": []
+}
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1B\.venv\Scripts\python.exe -m pytest tests -c .harness/pytest.ini --rootdir . -p no:cacheprovider -q --tb=short --junitxml=C:\Users\abhin\AppData\Local\Temp\tmpzanvu0n6\junit.xml --cov=src/ticket_triage --cov-config=.harness/coveragerc --cov-report=json:C:\Users\abhin\AppData\Local\Temp\tmpzanvu0n6\coverage.json --cov-report=term-missing
+--- exit code: 0
+--- stdout ---
+........................................................................ [ 32%]
+........................................................................ [ 64%]
+........................................................................ [ 96%]
+........                                                                 [100%]
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.4-final-0 _______________
+
+Name                                Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------
+src\ticket_triage\__main__.py           6      0   100%
+src\ticket_triage\cli.py               28      0   100%
+src\ticket_triage\contract.py          52      1    98%   56
+src\ticket_triage\env_loader.py        19      2    89%   22-23
+src\ticket_triage\errors.py             7      0   100%
+src\ticket_triage\guard.py              4      0   100%
+src\ticket_triage\model_client.py       2      0   100%
+src\ticket_triage\prompts.py            4      0   100%
+src\ticket_triage\service.py           12      0   100%
+-----------------------------------------------------------------
+TOTAL                                 134      3    98%
+Coverage JSON written to file C:\Users\abhin\AppData\Local\Temp\tmpzanvu0n6\coverage.json
+224 passed in 3.46s
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1B\.venv\Scripts\python.exe -m pytest tests -c .harness/pytest.ini --rootdir . -p no:cacheprovider --collect-only -q
+--- exit code: 0
+--- stdout ---
+tests/test_cli.py::test_ac022_triage_decision
+tests/test_cli.py::test_ac023_clarify_decision
+tests/test_cli.py::test_ac024_refuse_decision
+tests/test_cli.py::test_ac025_empty_file_gives_invalid_input_decision
+tests/test_cli.py::test_ac044_leading_byte_order_mark_is_removed
+tests/test_cli.py::test_ac045_crlf_counts_as_two_characters_with_no_newline_translation
+tests/test_cli.py::test_fr012_exactly_4000_characters_in_a_file_reaches_the_model
+tests/test_cli.py::test_ac055_non_ascii_output_is_utf8_bytes_with_one_lf
+tests/test_cli.py::test_fr012_output_has_alphabetical_keys
+tests/test_cli.py::test_ac026_wrong_argument_count[AC-026-zero]
+tests/test_cli.py::test_ac026_wrong_argument_count[AC-026-two]
+tests/test_cli.py::test_fr012_option_looking_argument_is_a_path_not_an_option
+tests/test_cli.py::test_ac027_unreadable_input[AC-027-missing]
+tests/test_cli.py::test_ac027_unreadable_input[AC-027-directory]
+tests/test_cli.py::test_ac027_unreadable_input[AC-027-0xFF]
+tests/test_cli.py::test_ac028_service_unavailable_exits_3
+tests/test_cli.py::test_ac028_missing_configuration_also_exits_3
+tests/test_cli.py::test_ac029_invalid_reply_exits_4_without_printing_the_reply
+tests/test_cli.py::test_fr013_prohibited_text_in_reply_is_not_printed
+tests/test_cli.py::test_ac026_end_to_end_without_arguments
+tests/test_cli.py::test_ac027_end_to_end_missing_file
+tests/test_cli.py::test_ac025_end_to_end_empty_file
+tests/test_cli.py::test_fr012_end_to_end_4001_characters_is_refused_by_the_guard
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-008]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-009]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-010]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-011]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-012]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-013]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-014]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-015]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-016]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-017]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-018]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-030]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-031]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-032]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-033]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-034]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-035]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-047]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-049]
+tests/test_contract.py::test_invalid_reply_raises_with_exact_raw_reply[AC-056]
+tests/test_contract.py::test_boundary_reply_is_returned_unchanged[AC-046]
+tests/test_contract.py::test_boundary_reply_is_returned_unchanged[AC-048]
+tests/test_contract.py::test_spec_replies_are_valid[T]
+tests/test_contract.py::test_spec_replies_are_valid[C]
+tests/test_contract.py::test_spec_replies_are_valid[R]
+tests/test_contract.py::test_spec_replies_are_valid[P]
+tests/test_contract.py::test_spec_replies_are_valid[S]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[low-billing]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[low-technical]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[low-account_access]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[low-shipping]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[low-other]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[medium-billing]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[medium-technical]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[medium-account_access]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[medium-shipping]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[medium-other]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[high-billing]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[high-technical]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[high-account_access]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[high-shipping]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[high-other]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[urgent-billing]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[urgent-technical]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[urgent-account_access]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[urgent-shipping]
+tests/test_contract.py::test_inv002_every_category_and_priority_is_accepted[urgent-other]
+tests/test_contract.py::test_inv002_unsupported_priority_is_rejected[critical]
+tests/test_contract.py::test_inv002_unsupported_priority_is_rejected[]
+tests/test_contract.py::test_inv002_unsupported_priority_is_rejected[MEDIUM]
+tests/test_contract.py::test_inv002_unsupported_priority_is_rejected[1]
+tests/test_contract.py::test_inv002_unsupported_priority_is_rejected[True]
+tests/test_contract.py::test_inv002_unsupported_priority_is_rejected[priority5]
+tests/test_contract.py::test_inv002_category_must_be_an_exact_enum_string[True]
+tests/test_contract.py::test_inv002_category_must_be_an_exact_enum_string[value1]
+tests/test_contract.py::test_inv002_category_must_be_an_exact_enum_string[value2]
+tests/test_contract.py::test_inv002_category_must_be_an_exact_enum_string[Billing]
+tests/test_contract.py::test_inv002_category_must_be_an_exact_enum_string[]
+tests/test_contract.py::test_inv003_triage_requires_category_priority_and_summary
+tests/test_contract.py::test_inv003_triage_must_not_carry_clarification_or_refusal_fields
+tests/test_contract.py::test_inv003_clarify_must_not_carry_triage_fields
+tests/test_contract.py::test_inv003_refuse_requires_a_reason_and_no_other_fields
+tests/test_contract.py::test_inv004_summary_length_boundaries
+tests/test_contract.py::test_inv004_clarification_question_boundaries
+tests/test_contract.py::test_inv004_lengths_count_code_points_not_bytes
+tests/test_contract.py::test_inv005_digit_runs_ignore_spaces_and_hyphens_and_cover_every_string_field
+tests/test_contract.py::test_inv006_literal_key_name_is_rejected_in_any_string_field
+tests/test_contract.py::test_fr009_non_standard_json_constants_are_rejected[NaN]
+tests/test_contract.py::test_fr009_non_standard_json_constants_are_rejected[Infinity]
+tests/test_contract.py::test_fr009_non_standard_json_constants_are_rejected[-Infinity]
+tests/test_contract.py::test_fr009_non_object_or_malformed_replies_are_rejected[]
+tests/test_contract.py::test_fr009_non_object_or_malformed_replies_are_rejected[   ]
+tests/test_contract.py::test_fr009_non_object_or_malformed_replies_are_rejected[null]
+tests/test_contract.py::test_fr009_non_object_or_malformed_replies_are_rejected[true]
+tests/test_contract.py::test_fr009_non_object_or_malformed_replies_are_rejected[7]
+tests/test_contract.py::test_fr009_non_object_or_malformed_replies_are_rejected["text"]
+tests/test_contract.py::test_fr009_non_object_or_malformed_replies_are_rejected[{]
+tests/test_contract.py::test_fr009_non_object_or_malformed_replies_are_rejected[raw7]
+tests/test_contract.py::test_fr009_whitespace_around_valid_json_is_not_repair
+tests/test_contract.py::test_fr009_nested_duplicate_keys_are_rejected_at_any_depth
+tests/test_contract.py::test_fr009_deeply_nested_reply_is_an_invalid_output_not_a_crash
+tests/test_entrypoint.py::test_plan_load_env_sets_names_that_are_not_set
+tests/test_entrypoint.py::test_plan_load_env_never_overrides_an_existing_value
+tests/test_entrypoint.py::test_plan_load_env_ignores_comments_blank_lines_and_malformed_lines
+tests/test_entrypoint.py::test_plan_load_env_strips_spaces_around_names_and_values
+tests/test_entrypoint.py::test_plan_load_env_missing_file_is_not_an_error
+tests/test_entrypoint.py::test_plan_load_env_never_prints_values
+tests/test_entrypoint.py::test_plan_entry_point_loads_dot_env_from_the_part_root
+tests/test_entrypoint.py::test_ac026_entry_point_exits_with_the_status_returned_by_main
+tests/test_entrypoint.py::test_ac025_entry_point_runs_a_whole_decision
+tests/test_evaluator.py::test_ac039_real_dataset_satisfies_the_specification
+tests/test_evaluator.py::test_ac039_every_trace_is_an_fr_inv_or_gr_id_that_exists_in_the_spec
+tests/test_evaluator.py::test_ac039_dataset_covers_the_exact_texts_used_by_the_fake_model_criteria
+tests/test_evaluator.py::test_ac039_boundary_inputs_have_exactly_4000_and_4001_characters
+tests/test_evaluator.py::test_ac039_a_defective_dataset_is_rejected[drop_cases]
+tests/test_evaluator.py::test_ac039_a_defective_dataset_is_rejected[duplicate_id]
+tests/test_evaluator.py::test_ac039_a_defective_dataset_is_rejected[no_gold_category]
+tests/test_evaluator.py::test_ac039_a_defective_dataset_is_rejected[bad_traces]
+tests/test_evaluator.py::test_ac039_a_defective_dataset_is_rejected[no_whitespace_case]
+tests/test_evaluator.py::test_ac039_a_defective_dataset_is_rejected[one_category_missing]
+tests/test_evaluator.py::test_ac040_score_is_exactly_0_85_for_the_worked_example
+tests/test_evaluator.py::test_fr017_score_components[exact]
+tests/test_evaluator.py::test_fr017_score_components[wrong-category]
+tests/test_evaluator.py::test_fr017_score_components[priority-two-levels-off]
+tests/test_evaluator.py::test_fr017_score_components[priority-one-level-off-low]
+tests/test_evaluator.py::test_fr017_summary_terms_are_matched_case_insensitively
+tests/test_evaluator.py::test_fr017_clarify_and_refuse_cases_score_one_when_correct
+tests/test_evaluator.py::test_fr017_wrong_action_or_wrong_refusal_reason_scores_zero
+tests/test_evaluator.py::test_ac041_any_layer_failure_scores_zero_even_with_matching_gold[AC-041-L2-card-digits]
+tests/test_evaluator.py::test_ac041_any_layer_failure_scores_zero_even_with_matching_gold[AC-041-L2-key-pattern]
+tests/test_evaluator.py::test_ac041_any_layer_failure_scores_zero_even_with_matching_gold[AC-041-L1-bad-category]
+tests/test_evaluator.py::test_ac041_any_layer_failure_scores_zero_even_with_matching_gold[AC-041-L2-summary-too-long]
+tests/test_evaluator.py::test_ac041_layers_one_and_two_both_run_and_record_everything
+tests/test_evaluator.py::test_ac042_service_error_after_exactly_three_attempts_is_error_and_invalidates_the_run
+tests/test_evaluator.py::test_ac052_third_attempt_success_is_scored_normally_and_is_not_error
+tests/test_evaluator.py::test_fr019_first_attempt_success_makes_exactly_one_attempt
+tests/test_evaluator.py::test_ac053_invalid_model_output_is_fail_score_zero_one_attempt_with_violations
+tests/test_evaluator.py::test_ac053_layers_one_and_two_run_on_the_raw_reply_even_when_it_is_not_json
+tests/test_evaluator.py::test_ac054_forbidden_term_in_the_output_fails_layer_two_and_scores_zero
+tests/test_evaluator.py::test_ac054_forbidden_terms_are_checked_in_every_string_field
+tests/test_evaluator.py::test_ac054_output_without_forbidden_terms_passes
+tests/test_evaluator.py::test_gr001_guard_refused_input_that_called_the_model_is_a_violation
+tests/test_evaluator.py::test_inv007_invalid_input_is_not_acceptable_for_a_ticket_the_guard_accepts
+tests/test_evaluator.py::test_gr005_card_digits_from_the_ticket_must_not_be_repeated_even_partially
+tests/test_evaluator.py::test_gr005_api_key_from_the_ticket_must_not_be_repeated
+tests/test_evaluator.py::test_fr018_guardrail_triage_needs_priority_within_one_level
+tests/test_evaluator.py::test_ac043_aggregate_of_exactly_0_85_passes
+tests/test_evaluator.py::test_ac043_just_below_the_threshold_fails
+tests/test_evaluator.py::test_ac043_a_single_layer_violation_prevents_pass_even_with_a_high_mean
+tests/test_evaluator.py::test_ac043_a_failing_guardrail_case_prevents_pass
+tests/test_evaluator.py::test_ac043_wrong_action_on_a_non_guardrail_case_is_not_a_contract_failure
+tests/test_evaluator.py::test_ac043_wrong_action_on_a_guardrail_case_still_prevents_pass
+tests/test_evaluator.py::test_ac043_an_error_case_makes_the_run_invalid_never_pass_or_fail
+tests/test_evaluator.py::test_ac043_all_conditions_true_passes
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-008]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-009]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-010]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-011]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-012]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-013]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-014]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-015]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-016]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-017]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-018]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-030]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-031]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-032]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-033]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-034]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-035]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-047]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-049]
+tests/test_evaluator.py::test_independent_checks_reject_every_reply_the_application_rejects[AC-056]
+tests/test_evaluator.py::test_independent_checks_accept_every_reply_the_application_accepts[AC-046]
+tests/test_evaluator.py::test_independent_checks_accept_every_reply_the_application_accepts[AC-048]
+tests/test_evaluator.py::test_independent_checks_accept_every_reply_the_application_accepts[T]
+tests/test_evaluator.py::test_independent_checks_accept_every_reply_the_application_accepts[C]
+tests/test_evaluator.py::test_independent_checks_accept_every_reply_the_application_accepts[R]
+tests/test_evaluator.py::test_independent_checks_accept_every_reply_the_application_accepts[P]
+tests/test_evaluator.py::test_independent_checks_accept_every_reply_the_application_accepts[S]
+tests/test_evaluator.py::test_ac017_only_the_api_key_invariant_is_violated
+tests/test_evaluator.py::test_independent_checks_reject_nested_duplicates_nan_and_non_objects
+tests/test_openai_client.py::test_ac050_missing_key_raises_service_error_without_network[AC-050-unset]
+tests/test_openai_client.py::test_ac050_missing_key_raises_service_error_without_network[AC-050-empty]
+tests/test_openai_client.py::test_ac050_missing_key_raises_service_error_without_network[AC-050-blank]
+tests/test_openai_client.py::test_ac051_missing_model_raises_service_error_without_network[AC-051-unset]
+tests/test_openai_client.py::test_ac051_missing_model_raises_service_error_without_network[AC-051-empty]
+tests/test_openai_client.py::test_ac051_missing_model_raises_service_error_without_network[AC-051-blank]
+tests/test_openai_client.py::test_ac050_ac051_default_client_path_through_triage[OPENAI_API_KEY]
+tests/test_openai_client.py::test_ac050_ac051_default_client_path_through_triage[OPENAI_MODEL]
+tests/test_openai_client.py::test_service_failure_raises_fixed_service_error[AC-019-timeout]
+tests/test_openai_client.py::test_service_failure_raises_fixed_service_error[AC-020-auth]
+tests/test_openai_client.py::test_service_failure_raises_fixed_service_error[FR-010-rate_limit]
+tests/test_openai_client.py::test_service_failure_raises_fixed_service_error[FR-010-connection]
+tests/test_openai_client.py::test_fr010_service_error_survives_the_full_triage_path
+tests/test_openai_client.py::test_fr010_service_error_text_is_constant
+tests/test_openai_client.py::test_plan_non_sdk_exceptions_are_not_swallowed
+tests/test_openai_client.py::test_plan_request_parameters
+tests/test_openai_client.py::test_plan_environment_is_read_at_call_time
+tests/test_openai_client.py::test_plan_null_content_becomes_an_empty_string
+tests/test_service.py::test_guard_refuses_without_calling_the_model[AC-001]
+tests/test_service.py::test_guard_refuses_without_calling_the_model[AC-002]
+tests/test_service.py::test_guard_refuses_without_calling_the_model[AC-003]
+tests/test_service.py::test_ac004_exactly_4000_characters_is_accepted_with_one_call
+tests/test_service.py::test_fr002_unicode_code_points_are_counted_not_utf8_bytes
+tests/test_service.py::test_fr002_text_is_not_trimmed_before_measuring_length
+tests/test_service.py::test_fr010_guard_refusal_needs_no_configuration
+tests/test_service.py::test_valid_reply_is_returned_unchanged[AC-005]
+tests/test_service.py::test_valid_reply_is_returned_unchanged[AC-006]
+tests/test_service.py::test_valid_reply_is_returned_unchanged[AC-007]
+tests/test_service.py::test_valid_reply_is_returned_unchanged[AC-036]
+tests/test_service.py::test_valid_reply_is_returned_unchanged[AC-037]
+tests/test_service.py::test_valid_reply_is_returned_unchanged[AC-038]
+tests/test_service.py::test_ac037_expected_priority_is_medium
+tests/test_service.py::test_ac038_no_returned_field_contains_the_card_number
+tests/test_service.py::test_decision_has_exactly_the_six_keys
+tests/test_service.py::test_ac021_system_instructions_identical_and_ticket_only_in_user_message
+tests/test_service.py::test_fr003_ticket_text_is_passed_exactly_not_trimmed_or_wrapped
+tests/test_service.py::test_fr003_system_prompt_defines_the_contract
+tests/test_service.py::test_fr003_system_prompt_treats_ticket_text_as_data
+
+224 tests collected in 0.46s
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1B\.venv\Scripts\python.exe -m ruff --version
+--- exit code: 0
+--- stdout ---
+ruff 0.17.4
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1B\.venv\Scripts\python.exe -m bandit --version
+--- exit code: 0
+--- stdout ---
+python.exe -m bandit 1.9.4
+  python version = 3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]
+
+--- stderr ---
+
+
+$ D:\M.Tech\Semesters\Semester 1\AssignmentWorkspace\AISDLC\Assignment-1-SDD-HE\Part-1B\.venv\Scripts\python.exe -m pytest --version
+--- exit code: 0
+--- stdout ---
+pytest 9.2.0
+
+--- stderr ---
+
+
+$ git rev-parse HEAD
+--- exit code: 0
+--- stdout ---
+e06da4a81b662a01032541b84c35fe619384be08
+
+--- stderr ---
+

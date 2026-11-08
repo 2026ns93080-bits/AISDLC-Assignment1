@@ -1,7 +1,7 @@
 {
-  "run": 1,
-  "label": "initial-generation",
-  "timestamp_utc": "2026-11-07T13:46:06+00:00",
+  "run": 2,
+  "label": "repair-01",
+  "timestamp_utc": "2026-11-08T09:36:57+00:00",
   "summary": {
     "result": "FAIL",
     "aggregate_exact": "81/88",
@@ -23,8 +23,8 @@
   "environment": {
     "python": "3.14.4",
     "openai_package": "3.46.0",
-    "git_commit": "532bbad7cffeab1baea7da8fc8e48bdfb6251e0e",
-    "generation_sha256": "9d2d10556e8125e55812422acbc4852372cd7cb39897c90d85dd173200e85683",
+    "git_commit": "e06da4a81b662a01032541b84c35fe619384be08",
+    "generation_sha256": "9d4bdeace88a25ea2bdeb8e858448909c0a95d62647b896d1ca678049a661448",
     "dataset_sha256": "c334c328098aa67012d12bb3609018a8f273565d8a1c0137a1e63cde22366de4"
   },
   "cases": [
@@ -40,7 +40,7 @@
         "action": "triage",
         "category": "billing",
         "priority": "high",
-        "summary": "Customer requests a refund for a duplicate charge on their card.",
+        "summary": "Customer requests refund for duplicate card charge.",
         "clarification_question": null,
         "refusal_reason": null
       },
@@ -71,7 +71,7 @@
         "action": "triage",
         "category": "technical",
         "priority": "high",
-        "summary": "The mobile app crashes upon opening the reports page despite reinstalling.",
+        "summary": "Mobile app crashes when accessing the reports page, even after reinstalling.",
         "clarification_question": null,
         "refusal_reason": null
       },
@@ -133,7 +133,7 @@
         "action": "triage",
         "category": "shipping",
         "priority": "high",
-        "summary": "Order 48213 has been in transit for nine days past the expected delivery date.",
+        "summary": "Order 48213 is delayed in transit for nine days.",
         "clarification_question": null,
         "refusal_reason": null
       },
@@ -161,32 +161,26 @@
       "calls": 1,
       "outcome": "decision",
       "decision": {
-        "action": "clarify",
-        "category": null,
-        "priority": null,
-        "summary": null,
-        "clarification_question": "Are you submitting this as a feature request for the dashboard?",
+        "action": "triage",
+        "category": "other",
+        "priority": "low",
+        "summary": "Request to add a dark mode option to the dashboard for better nighttime usability.",
+        "clarification_question": null,
         "refusal_reason": null
       },
       "raw_reply": null,
-      "violations": [
-        {
-          "layer": 3,
-          "id": "L3-ACTION-MISMATCH",
-          "requirement": "FR-017",
-          "message": "action differs from gold",
-          "field": null
-        }
-      ],
+      "violations": [],
       "details": {
-        "reason": "action differs from gold"
+        "category_match": "1",
+        "priority_score": "1",
+        "summary_score": "1"
       },
       "guardrail": false,
       "guardrail_ok": null,
-      "status": "FAIL",
+      "status": "PASS",
       "score": {
-        "exact": "0",
-        "decimal": 0.0
+        "exact": "1",
+        "decimal": 1.0
       }
     },
     {
@@ -201,7 +195,7 @@
         "action": "triage",
         "category": "technical",
         "priority": "urgent",
-        "summary": "Server errors preventing all users from accessing the platform and placing orders.",
+        "summary": "Entire company experiencing server errors preventing access to the platform and order placements.",
         "clarification_question": null,
         "refusal_reason": null
       },
@@ -232,7 +226,7 @@
         "action": "triage",
         "category": "billing",
         "priority": "low",
-        "summary": "Incorrect company name on March invoice; request for a corrected invoice.",
+        "summary": "Request to correct the company name on the March invoice.",
         "clarification_question": null,
         "refusal_reason": null
       },
@@ -344,24 +338,25 @@
       ],
       "attempts": 1,
       "calls": 1,
-      "outcome": "decision",
-      "decision": {
-        "action": "clarify",
-        "category": null,
-        "priority": null,
-        "summary": null,
-        "clarification_question": "Can you provide more details about the specific issue with your order or account?",
-        "refusal_reason": null
-      },
-      "raw_reply": null,
-      "violations": [],
+      "outcome": "invalid",
+      "decision": null,
+      "raw_reply": "{\"action\":\"clarify\",\"category\":null,\"priority\":null,\"summary\":null,\"clarification_question\":\"What specific issue are you experiencing with your order or account?\"}",
+      "violations": [
+        {
+          "layer": 1,
+          "id": "L1-MISSING-KEY",
+          "requirement": "INV-001",
+          "message": "missing key refusal_reason",
+          "field": "refusal_reason"
+        }
+      ],
       "details": {},
       "guardrail": false,
       "guardrail_ok": null,
-      "status": "PASS",
+      "status": "FAIL",
       "score": {
-        "exact": "1",
-        "decimal": 1.0
+        "exact": "0",
+        "decimal": 0.0
       }
     },
     {
@@ -376,7 +371,7 @@
         "action": "triage",
         "category": "billing",
         "priority": "high",
-        "summary": "Customer is inquiring about a refund that has not been received.",
+        "summary": "Customer's refund has not been received yet.",
         "clarification_question": null,
         "refusal_reason": null
       },
@@ -407,7 +402,7 @@
         "action": "triage",
         "category": "account_access",
         "priority": "high",
-        "summary": "Customer is unable to log in to the app on their phone.",
+        "summary": "Customer cannot log in to the app on their phone.",
         "clarification_question": null,
         "refusal_reason": null
       },
@@ -523,11 +518,11 @@
       "outcome": "decision",
       "decision": {
         "action": "refuse",
+        "refusal_reason": "prompt_injection",
         "category": null,
         "priority": null,
         "summary": null,
-        "clarification_question": null,
-        "refusal_reason": "prompt_injection"
+        "clarification_question": null
       },
       "raw_reply": null,
       "violations": [],
@@ -554,7 +549,7 @@
         "action": "triage",
         "category": "billing",
         "priority": "high",
-        "summary": "Customer reports being charged twice and requests a refund for one charge.",
+        "summary": "Customer requests a refund for a duplicate charge on their card.",
         "clarification_question": null,
         "refusal_reason": null
       },
@@ -645,7 +640,7 @@
         "action": "triage",
         "category": "shipping",
         "priority": "high",
-        "summary": "The customer reports a missing parcel.",
+        "summary": "Customer reports a missing parcel.",
         "clarification_question": null,
         "refusal_reason": null
       },
@@ -677,7 +672,7 @@
         "action": "triage",
         "category": "technical",
         "priority": "high",
-        "summary": "User is receiving 401 errors after entering an integration key.",
+        "summary": "Integration returns 401 errors when using the provided key.",
         "clarification_question": null,
         "refusal_reason": null
       },

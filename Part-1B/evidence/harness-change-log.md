@@ -15,3 +15,9 @@ Unlike Part 1A, the protected files did change once in Part 1B, and I should say
  Part-1B/.harness/reaggregate.py     | 42 +++++++++++++++++++++++++++++++++++++
  Part-1B/tests/test_evaluator.py     | 19 +++++++++++++++++
  5 files changed, 70 insertions(+), 5 deletions(-)
+ 
+ 
+ Run 1 failed on N05 (wrong action), and the run was recorded as FAIL because of the evaluator defect I then fixed.
+The repair (e06da4a) fixed N05, but run 2 failed on A02, where the model omitted a key, a Layer 1 violation.
+Both the application and the independent Layer 1 check rejected that reply.
+The model isn’t deterministic, so a single run can’t prove cause.

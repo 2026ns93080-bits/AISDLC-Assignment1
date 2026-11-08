@@ -397,7 +397,9 @@ def aggregate(results):
     scored = [r for r in results if r["status"] != "ERROR"]
     errors = [r["id"] for r in results if r["status"] == "ERROR"]
     mean = sum((r["score"] for r in scored), Fraction(0)) / len(scored) if scored else Fraction(0)
-    contract_ok = all(not r["violations"] for r in scored)
+    # FR-018 / AC-043: "contract-valid" and "meets all invariants" are layer 1 and layer 2 checks.
+    # A wrong action on a non-guardrail case (layer 3) scores 0 but does not break either condition.
+    contract_ok = all(not any(v["layer"] in (1, 2) for v in r["violations"]) for r in scored)
     guardrails_ok = all(r["guardrail_ok"] for r in scored if r["guardrail"])
     if errors:
         verdict = "INVALID"

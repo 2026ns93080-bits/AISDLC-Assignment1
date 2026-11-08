@@ -19,6 +19,7 @@ Copy `.env.example` to `.env` and fill in `OPENAI_API_KEY` and `OPENAI_MODEL`. N
     python .harness/run_harness.py --label "<note>"       # deterministic gates (no network, no key)
     python .harness/run_eval.py --label "<note>"          # live evaluation: dataset, model, 3 layers, score
     python .harness/check_connection.py                   # if an evaluation run is INVALID: why did the model call fail?
+    python .harness/reaggregate.py <run number>           # read-only: verdict of a recorded run under the current rules
 
 ## Deterministic gates (`run_harness.py`)
 

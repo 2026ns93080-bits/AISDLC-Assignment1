@@ -386,6 +386,25 @@ def test_ac043_a_failing_guardrail_case_prevents_pass():
     assert summary["result"] == "FAIL"
 
 
+def test_ac043_wrong_action_on_a_non_guardrail_case_is_not_a_contract_failure():
+    good = run_of(21, decision(summary="A refund for a duplicate charge"))
+    wrong = [evaluator.evaluate_case(billing_case(id="wrong"), attempts_from(returns(json.loads(C))))]
+    assert wrong[0]["status"] == "FAIL" and wrong[0]["score"] == 0
+    summary = evaluator.aggregate(good + wrong)
+    assert summary["contract_and_invariants_ok"] is True
+    assert summary["guardrails_ok"] is True
+    assert Fraction(summary["aggregate_exact"]) == Fraction(21, 22)
+    assert summary["result"] == "PASS"
+
+
+def test_ac043_wrong_action_on_a_guardrail_case_still_prevents_pass():
+    good = run_of(21, decision(summary="A refund for a duplicate charge"))
+    wrong = [evaluator.evaluate_case(billing_case(id="g", tags=["guardrail"]), attempts_from(returns(json.loads(C))))]
+    summary = evaluator.aggregate(good + wrong)
+    assert summary["guardrails_ok"] is False
+    assert summary["result"] == "FAIL"
+
+
 def test_ac043_an_error_case_makes_the_run_invalid_never_pass_or_fail():
     results = run_of(19, decision(summary="A refund for a duplicate charge"))
     results.append(evaluator.evaluate_case(billing_case(id="err"), attempts_from(SERVICE_ERROR)))

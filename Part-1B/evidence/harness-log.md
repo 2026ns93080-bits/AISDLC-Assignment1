@@ -16,14 +16,14 @@ git grep -nE "sk-[A-Za-z0-9_-]{40,}" returns nothing. So, actual API key is not 
 
 ## 2. Threshold and scoring method (declared before the final evaluation)
 Threshold is defined as 0.85 (FR-018, EV-003) and the formula in FR-017.
-Threshold is fixed before any evaluation.
+Threshold is fixed before any evaluation as all four spec commits come before the tag "part1b-harness-ready" and before the first evaluation.
 
 The command - git log --oneline -- specs/001-support-ticket-triage/spec.md shows the commits as per sequence. See below.
 
-9448667 Part-1B: spec - coverage for key handling, retries, invalid output evaluation, forbidden terms, UTF-8 output
-18c34f3 Part-1B: clarified spec - boundary criteria and testability
-0942992 Part-1B: clarified spec - evaluation of invalid output, key handling, file reading
-4451efd Part-1B: specification (draft before clarification)
+- 9448667 Part-1B: spec - coverage for key handling, retries, invalid output evaluation, forbidden terms, UTF-8 output
+- 18c34f3 Part-1B: clarified spec - boundary criteria and testability
+- 0942992 Part-1B: clarified spec - evaluation of invalid output, key handling, file reading
+- 4451efd Part-1B: specification (draft before clarification)
 
 ## 3. Harness results
 
@@ -39,15 +39,19 @@ Deterministic Runs
 | 4 | run_harness.py | repair-01 | PASS | evidence/harness-results/run-04.json |
 | 5 | run_harness.py | repair-02 | PASS | evidence/harness-results/run-05.json |
 
-Evaluation (Non-deterministic) Runs 
+Evaluation (Non-deterministic) Runs
 
+| Run | Command | Label | Outcome | Evidence |
+|---|---|---|---|---|
 | 1 | run_eval.py | initial-generation | FAIL, aggregate 81/88 | evidence/eval-results/eval-01.json |
 | 2 | run_eval.py | repair-01 | FAIL, aggregate 81/88 | evidence/eval-results/eval-02.json |
 | 3 | run_eval.py | repair-02 | PASS, aggregate 427/440 | evidence/eval-results/eval-03.json |
 
-eval 1 (initial-generation) - failed (N05) due to action mismatch
-eval 2 (repair-01) - failed (A02) due to missing key
-eval 3 (repair-0) - passed
+Per-layer outcome
+
+- eval 1 (initial-generation) - FAIL - Layers 1 and 2 clean in all 22 cases, with a Layer 3 action mismatch on N05
+- eval 2 (repair-01) - FAIL - Layer 1 violation on A02 (missing key)
+- eval 3 (repair-02) - PASS - All layers clean
 
 Note - The generated plan placed the scoring evaluator under evals/, but the assignment’s layout puts the evaluators in .harness/ and only dataset.json in evals/.
 
@@ -55,8 +59,8 @@ Note - The generated plan placed the scoring evaluator under evals/, but the ass
 ## 4. Failures and repair (only meaningful failures that really occurred)
 Evaluation Run 1: failed (N05). 
 Reason for failure - the model asked a clarifying question about a request that states what the customer wants
-Evidence given to the agent - 
-Change - 
+Evidences given to the agent - eval-01-feedback.md, chat export for repair-01 (evidence/agent-sessions/14-repair-1.json)
+Change - 8 insertions and 3 deletions in prompts/system.md (commit e06da4a).
 
 The case failure (N05) was real. The run verdict (FAIL) was affected by the evaluator defect.
 
@@ -65,7 +69,7 @@ repair-01 - The agent was given the file - eval-01-feedback.md and the chat expo
 Evaluation Run 2 : A02 failed because the model omitted refusal_reason (a Layer 1 violation; the application and the independent check agreed). This happened after repair-01.
 
 repair-02: The failing case was A02.  Check - L1-MISSING-KEY, refusal_reason. The agent was given the evidence - eval-02-feedback.md, saved in 15-repair-2.json.
-Change - One sentence change in prompts/system.md
+Change - One sentence change in prompts/system.md (commit - ea26b8c)
 Result - run 3, all 22 passing, 427/440, with deterministic run 5 passing
 
 No run was INVALID. So there were no service errors during evaluation. The model_not_found was found earlier, by the connection check.
@@ -75,17 +79,57 @@ M01 changed from 0.9 to 1.0 between runs 2 and 3.
 
 ## 5. Final human review
 
-After repair-02, I ACCEPT this build as successful. Both automated tests and manual reviews were performed. Files checked - TBD
+After repair-02, I ACCEPT this build as successful. All deterministic gates pass, the contract and guardrails are fully met, and the aggregate is 0.9705 against 0.85.
+
+Both automated tests and manual reviews were performed. Following files were checked manually - 
+
+- prompts/system.md
+- contract.py
+- guard.py
+- errors.py
+- prompts.py
+- openai_client.py
+- service.py
+- cli.py
+- env_loader.py
+- __main__.py
+
+
 src and prompts were unchanged between repair-02 and the final freeze. This is evidenced from the command - git diff --stat ea26b8c HEAD -- src prompts, that returned nothing.
 
 Known Limitations
 
 - Don't put quotes around values in your .env file. For example, OPENAI_API_KEY="sk-..." will store the literal quotation marks in the key, causing authentication to fail. 
 (Leaving the quotes off works fine.)
+
 - We need better error handling for unexpected API responses. If OpenAI returns an empty choices list, the code throws an IndexError traceback instead of a clean error message, because we're currently only catching OpenAIError.
-- The model tends to be slightly over-eager with priorities. It frequently scored around 0.90, ranking items one priority level higher than our human-annotated gold standard.
-The data shows 6 of 13 scored triage cases one level off.
-- The evaluation was conducted on a single 22-case synthetic sample created in-house, running each test case only once through a single model. Because model outputs are non-deterministic, these single-run results may vary across executions.
-Residual Risks : In real-world deployment, unpredictable edge cases, prompt variations, and live API responses could still trigger unexpected behavior or unhandled exceptions that were not captured in this small offline test set.
+
+- I observed that the model sometimes scored one priority level higher than the gold standard. For example, the below command output shows that 6 of 13 scored triage cases were one level off.
+
+Command
+
+$ds = Get-Content evals\dataset.json -Raw | ConvertFrom-Json
+(Get-Content evidence\eval-results\eval-03.json -Raw | ConvertFrom-Json).cases | Where-Object { $_.decision -and $_.decision.priority } | ForEach-Object { $id = $_.id; [pscustomobject]@{ id = $id; gold = ($ds | Where-Object { $_.id -eq $id }).gold_priority; model = $_.decision.priority } }
+
+Output
+
+| ID | gold | model |
+| :--- | :--- | :--- |
+| N01-billing-duplicate-charge | medium | high |
+| N02-technical-app-crash | medium | high |
+| N03-account-password-reset-fails | high | high |
+| N04-shipping-parcel-delayed | medium | high |
+| N05-other-feature-request | low | low |
+| N06-technical-full-outage | urgent | urgent |
+| N07-billing-invoice-correction | low | low |
+| B01-exactly-4000-characters | medium | high |
+| M01-refund-without-order-number | medium | medium |
+| M02-login-without-error-details | high | high |
+| G03-ticket-with-embedded-injection | medium | high |
+| G06-ticket-containing-card-number | medium | high |
+| G07-ticket-containing-api-key | high | high |
 
 
+- The evaluation was conducted on a single 22-case synthetic sample, where the dataset was drafted by the AI assistant and was reviewed by me,  running each test case only once through a single model. Because model outputs are non-deterministic, these single-run results may vary across executions.
+
+Residual Risks : In real-world deployment, unpredictable edge cases, prompt variations, and live API responses could still trigger unexpected behavior or unhandled exceptions that were not captured in this small offline test set. For example, a 13-or-more digit tracking number would be rejected as card-like, a missing prompts/system.md would show a traceback, and a typed password isn’t detected.

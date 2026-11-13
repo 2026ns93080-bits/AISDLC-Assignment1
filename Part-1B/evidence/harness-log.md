@@ -25,6 +25,8 @@ The command - git log --oneline -- specs/001-support-ticket-triage/spec.md shows
 - 0942992 Part-1B: clarified spec - evaluation of invalid output, key handling, file reading
 - 4451efd Part-1B: specification (draft before clarification)
 
+Command - git merge-base --is-ancestor 9448667 part1b-harness-ready; $LASTEXITCODE gives prints 0. It shows the last spec commit is an ancestor of the harness-ready tag.
+
 ## 3. Harness results
 
 5 Deterministic runs followed by 3 Evaluation (Non-deterministic) runs as provided in below table - 
@@ -59,16 +61,15 @@ Note - The generated plan placed the scoring evaluator under evals/, but the ass
 ## 4. Failures and repair (only meaningful failures that really occurred)
 Evaluation Run 1: failed (N05). 
 Reason for failure - the model asked a clarifying question about a request that states what the customer wants
-Evidences given to the agent - eval-01-feedback.md, chat export for repair-01 (evidence/agent-sessions/14-repair-1.json)
+Evidence given to the agent - eval-01-feedback.md, 
+chat export for repair-01 - evidence/agent-sessions/14-repair-1.json
 Change - 8 insertions and 3 deletions in prompts/system.md (commit e06da4a).
 
 The case failure (N05) was real. The run verdict (FAIL) was affected by the evaluator defect.
 
-repair-01 - The agent was given the file - eval-01-feedback.md and the chat export - 14-repair-1.json
-
 Evaluation Run 2 : A02 failed because the model omitted refusal_reason (a Layer 1 violation; the application and the independent check agreed). This happened after repair-01.
 
-repair-02: The failing case was A02.  Check - L1-MISSING-KEY, refusal_reason. The agent was given the evidence - eval-02-feedback.md, saved in 15-repair-2.json.
+repair-02: The failing case was A02.  Check - L1-MISSING-KEY, refusal_reason. The agent was given the evidence - eval-02-feedback.md, saved in 15-repair-2.json. I manually renamed the initial export from 14-repair-2.json (from commit - ea26b8c) to 15-repair-2.json to match the repair order.
 Change - One sentence change in prompts/system.md (commit - ea26b8c)
 Result - run 3, all 22 passing, 427/440, with deterministic run 5 passing
 
@@ -99,10 +100,9 @@ src and prompts were unchanged between repair-02 and the final freeze. This is e
 
 Known Limitations
 
-- Don't put quotes around values in your .env file. For example, OPENAI_API_KEY="sk-..." will store the literal quotation marks in the key, causing authentication to fail. 
-(Leaving the quotes off works fine.)
+- Values in .env file should not be put under quotes (""). For example, OPENAI_API_KEY="sk-..." will store the literal quotation marks in the key, causing authentication to fail. 
 
-- We need better error handling for unexpected API responses. If OpenAI returns an empty choices list, the code throws an IndexError traceback instead of a clean error message, because we're currently only catching OpenAIError.
+- If OpenAI returns an empty choices list, the code throws an IndexError traceback instead of a clean error message, because I am currently only catching OpenAIError.
 
 - I observed that the model sometimes scored one priority level higher than the gold standard. For example, the below command output shows that 6 of 13 scored triage cases were one level off.
 

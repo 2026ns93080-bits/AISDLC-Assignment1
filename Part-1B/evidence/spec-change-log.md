@@ -2,7 +2,8 @@ Nov 1 - 09.50 PM — While testing, I noticed AC-017 wasn't actually isolated—
 
 Nov 3 - 11.17 AM — Digging deeper, I found some loose ends: the key-handling and retry rules didn't have any acceptance criteria written out, the InvalidModelOutput eval path was totally untested, and FR-007 had zero mechanical checks. So I ran clarify again to sort it out.
 
-Nov 7 - 1:30 PM — The analyze tool popped up three findings. I went through each one and chose to decline all of them. Reviewing and declining a suggestion is valid evidence on its own. Here is why I passed on each:
+Nov 7 - 1:30 PM — The analyze tool popped up three findings. I went through each one and chose to decline all of them.
+Here is why I passed on each:
 
 A1 (Add a runtime priority rule saying “don’t infer high from an absent workaround”): Skipped. Clarification Q5 already established that the dataset gold is authoritative, with a one-level tolerance. Adopting this rule would directly contradict my own dataset—N03 ("cannot log in", no workaround stated) and M02 both have gold high priority. Changing it would force me to mess with locked gold labels.
 

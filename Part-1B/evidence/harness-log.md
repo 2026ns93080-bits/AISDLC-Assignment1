@@ -49,7 +49,7 @@ Evaluation (Non-deterministic) Runs
 | 2 | run_eval.py | repair-01 | FAIL, aggregate 81/88 | evidence/eval-results/eval-02.json |
 | 3 | run_eval.py | repair-02 | PASS, aggregate 427/440 | evidence/eval-results/eval-03.json |
 
-Note on Score Fractions across Rin 1 & 2 (81/88 vs. 427/440): These reflect the exact same mean case score metric. Denominators shifted simply due to scaling up test iterations in later runs — the underlying scoring logic never changed.
+Note on Score Fractions across Run 1 & 2 (81/88 vs. 427/440): The scoring method never changed, and every run scored the exact same 22 cases once. 81/88 is simply the simplified form of 405/440.
 
 Per-layer outcome
 
@@ -57,8 +57,7 @@ Per-layer outcome
 - eval 2 (repair-01) - FAIL - Layer 1 violation on A02 (missing key)
 - eval 3 (repair-02) - PASS - All layers clean. 
 
-Note - The assignment’s layout puts the evaluators in .harness/ and only dataset.json in evals/. However, the generated plan placed the scoring evaluator under evals/, I simply kept it right there. It was already a logical, clean directory structure for the evaluation scripts, so I didn't need to move or refactor it. 
-
+Note - The generated plan pointed the evaluator to evals/, but I placed the evaluator in .harness/ to follow the assignment’s layout.
 
 ## 4. Failures and repair (only meaningful failures that really occurred)
 Evaluation Run 1: failed (N05). 

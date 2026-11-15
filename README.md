@@ -138,5 +138,5 @@ Git tags mark the milestones: Part 1A `harness-ready`, `initial-gen`, `final-gen
 ## Deliverables
 
 - Source and evidence: this repository.
-- Demonstration video: **<add the link before submitting>**
+- Demonstration video: https://drive.google.com/file/d/1Ejmb_zHMbmdxJ2KmWwbbfwOyavXOR3ad/view?usp=sharing
 - Reflection report: uploaded to the LMS together with the links to this repository and the video.

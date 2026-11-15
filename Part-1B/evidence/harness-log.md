@@ -49,7 +49,7 @@ Evaluation (Non-deterministic) Runs
 | 2 | run_eval.py | repair-01 | FAIL, aggregate 81/88 | evidence/eval-results/eval-02.json |
 | 3 | run_eval.py | repair-02 | PASS, aggregate 427/440 | evidence/eval-results/eval-03.json |
 
-Note on Score Fractions across Run 1 & 2 (81/88 vs. 427/440): The scoring method never changed, and every run scored the exact same 22 cases once. 81/88 is simply the simplified form of 405/440.
+Note on Score Fractions across Runs 1–2 (81/88) vs. Run 3 (427/440): The scoring method never changed, and every run scored the exact same 22 cases once. 81/88 is simply the simplified form of 405/440.
 
 Per-layer outcome
 

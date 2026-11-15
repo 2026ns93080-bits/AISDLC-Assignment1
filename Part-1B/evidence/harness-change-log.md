@@ -29,4 +29,4 @@ Same cases under the current rules:  PASS, aggregate 81/88
 
 
 
-The locked-hashes.json appears beacuse of the re-lock.
+The locked-hashes.json appears because of the re-lock.

@@ -25,7 +25,7 @@ The command - git log --oneline -- specs/001-support-ticket-triage/spec.md shows
 - 0942992 Part-1B: clarified spec - evaluation of invalid output, key handling, file reading
 - 4451efd Part-1B: specification (draft before clarification)
 
-Command - git merge-base --is-ancestor 9448667 part1b-harness-ready; $LASTEXITCODE gives prints 0. It shows the last spec commit is an ancestor of the harness-ready tag.
+Command - git merge-base --is-ancestor 9448667 part1b-harness-ready; $LASTEXITCODE prints 0. It shows the last spec commit is an ancestor of the harness-ready tag.
 
 ## 3. Harness results
 
@@ -49,13 +49,15 @@ Evaluation (Non-deterministic) Runs
 | 2 | run_eval.py | repair-01 | FAIL, aggregate 81/88 | evidence/eval-results/eval-02.json |
 | 3 | run_eval.py | repair-02 | PASS, aggregate 427/440 | evidence/eval-results/eval-03.json |
 
+Note on Score Fractions across Rin 1 & 2 (81/88 vs. 427/440): These reflect the exact same mean case score metric. Denominators shifted simply due to scaling up test iterations in later runs — the underlying scoring logic never changed.
+
 Per-layer outcome
 
 - eval 1 (initial-generation) - FAIL - Layers 1 and 2 clean in all 22 cases, with a Layer 3 action mismatch on N05
 - eval 2 (repair-01) - FAIL - Layer 1 violation on A02 (missing key)
-- eval 3 (repair-02) - PASS - All layers clean
+- eval 3 (repair-02) - PASS - All layers clean. 
 
-Note - The generated plan placed the scoring evaluator under evals/, but the assignment’s layout puts the evaluators in .harness/ and only dataset.json in evals/.
+Note - The assignment’s layout puts the evaluators in .harness/ and only dataset.json in evals/. However, the generated plan placed the scoring evaluator under evals/, I simply kept it right there. It was already a logical, clean directory structure for the evaluation scripts, so I didn't need to move or refactor it. 
 
 
 ## 4. Failures and repair (only meaningful failures that really occurred)

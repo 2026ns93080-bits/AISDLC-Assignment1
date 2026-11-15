@@ -1,11 +1,11 @@
-Nov 1 - 09.50 PM - I found that AC-017 wasn’t isolated (the digits also tripped another invariant), that the evaluation had no rule for InvalidModelOutput, and that BOM and newline handling would have changed the 4000-character boundary silently.
+Nov 1 - 09.50 PM — While testing, I noticed AC-017 wasn't actually isolated—those digits tripped another invariant completely. I also realized my evaluation didn't have any rule for InvalidModelOutput, and things like BOM or newline handling could have silently messed up the 4,000-character boundary.
 
-Nov 3 - 11.17 AM - I found that the key-handling rule and the retry rule had no acceptance criteria, that the InvalidModelOutput evaluation path was untested, and that FR-007 had no mechanical check. So ran clarify again.
+Nov 3 - 11.17 AM — Digging deeper, I found some loose ends: the key-handling and retry rules didn't have any acceptance criteria written out, the InvalidModelOutput eval path was totally untested, and FR-007 had zero mechanical checks. So I ran clarify again to sort it out.
 
-Nov 7 - 1:30 PM - Analyze raised three findings, I reviewed each, I chose not to act, and for A1 the reason was that it contradicts clarification Q5 and my gold labels. A reviewed and declined finding is legitimate evidence.
+Nov 7 - 1:30 PM — The analyze tool popped up three findings. I went through each one and chose to decline all of them. Reviewing and declining a suggestion is valid evidence on its own. Here is why I passed on each:
 
-The analyze report: accept none of the three suggestions
-Finding	Recommendation
-A1: add a runtime priority rule saying “don’t infer high from an absent workaround”	Don’t. Clarification Q5 already decided that the dataset gold is authoritative, with a one-level tolerance. The proposed rule would also contradict my my dataset: N03 (“cannot log in”, no workaround stated) and M02 both have gold high. Adopting it would force me to change locked gold labels
-D1: cut EV-002 to EV-004 down to references to FR-016 to FR-019	Skip. I compared them, and they are consistent today. Editing spec.md now means re-locking the hashes and recording a reason, for a cosmetic benefit
-U1: state in the plan and tasks that the human supplies the dataset, evaluator and harness	Skip. It’s already true and stated in the constitution and tasks. The note adds nothing
+A1 (Add a runtime priority rule saying “don’t infer high from an absent workaround”): Skipped. Clarification Q5 already established that the dataset gold is authoritative, with a one-level tolerance. Adopting this rule would directly contradict my own dataset—N03 ("cannot log in", no workaround stated) and M02 both have gold high priority. Changing it would force me to mess with locked gold labels.
+
+D1 (Cut EV-002 through EV-004 down to references for FR-016 to FR-019): Skipped. I checked them, and they are consistent as-is. Editing spec.md now just means re-locking all the hashes and logging a reason for a purely cosmetic benefit.
+
+U1 (State in the plan and tasks that the human supplies the dataset, evaluator, and harness): Skipped. That’s already true and explicitly stated in the constitution and tasks; adding a note to the plan adds zero value.

@@ -12,7 +12,7 @@ Specification (spec.md) : It is located - "specs/001-parking-fee-calculator/spec
 
 Implementation Plan (plan.md): The implementation plan directly aligned with the specification and acceptance criteria.
 
-Task Breakdown (tasks.md): The granular, sequenced task list (ranging from T001 to T010) that guided the agentic implementation steps. The agent did T001 to T008.
+Task Breakdown (tasks.md): The granular, sequenced task list (ranging from T001 to T010) that guided the agentic implementation steps. The agent did T001 to T008. T009 and T010 are unticked in tasks.md as they where verification tasks that I carried out through runs 3 and 4 and during manual review.
 
 
 Then the implementation was executed across 3 distinct code-generation increments (commits), followed by harness evaluations and a repair iteration.
